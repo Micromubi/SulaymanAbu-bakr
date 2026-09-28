@@ -150,6 +150,65 @@
     }
   });
 
+  /* ---------- Gallery lightbox ---------- */
+  var lightbox = document.getElementById("lightbox");
+  var galleryButtons = Array.prototype.slice.call(document.querySelectorAll(".gallery__open"));
+
+  if (lightbox && galleryButtons.length) {
+    var lbImg = lightbox.querySelector(".lightbox__img");
+    var lbCaption = lightbox.querySelector(".lightbox__caption span");
+    var lbCredit = lightbox.querySelector(".lightbox__caption small");
+    var current = 0;
+    var lastFocus = null;
+
+    function show(i) {
+      current = (i + galleryButtons.length) % galleryButtons.length;
+      var btn = galleryButtons[current];
+      lbImg.src = btn.getAttribute("data-full");
+      lbImg.alt = btn.querySelector("img").alt;
+      lbCaption.textContent = btn.getAttribute("data-caption");
+      lbCredit.textContent = btn.getAttribute("data-credit");
+    }
+    function openLightbox(i) {
+      lastFocus = document.activeElement;
+      show(i);
+      lightbox.hidden = false;
+      document.body.style.overflow = "hidden";
+      lightbox.querySelector(".lightbox__close").focus();
+    }
+    function closeLightbox() {
+      lightbox.hidden = true;
+      document.body.style.overflow = "";
+      if (lastFocus) lastFocus.focus();
+    }
+
+    galleryButtons.forEach(function (btn, i) {
+      btn.addEventListener("click", function () { openLightbox(i); });
+    });
+    lightbox.querySelector(".lightbox__close").addEventListener("click", closeLightbox);
+    lightbox.querySelector(".lightbox__nav--prev").addEventListener("click", function () { show(current - 1); });
+    lightbox.querySelector(".lightbox__nav--next").addEventListener("click", function () { show(current + 1); });
+    lightbox.addEventListener("click", function (e) {
+      if (e.target === lightbox) closeLightbox();
+    });
+    document.addEventListener("keydown", function (e) {
+      if (lightbox.hidden) return;
+      if (e.key === "Escape") closeLightbox();
+      if (e.key === "ArrowLeft") show(current - 1);
+      if (e.key === "ArrowRight") show(current + 1);
+    });
+
+    // Swipe between photos on touch screens
+    var touchX = null;
+    lightbox.addEventListener("touchstart", function (e) { touchX = e.touches[0].clientX; }, { passive: true });
+    lightbox.addEventListener("touchend", function (e) {
+      if (touchX === null) return;
+      var dx = e.changedTouches[0].clientX - touchX;
+      if (Math.abs(dx) > 50) show(current + (dx < 0 ? 1 : -1));
+      touchX = null;
+    });
+  }
+
   /* ---------- Footer year ---------- */
   document.getElementById("year").textContent = new Date().getFullYear();
 })();
