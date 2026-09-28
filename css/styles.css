@@ -32,6 +32,9 @@ html { scroll-behavior: smooth; scroll-padding-top: 80px; }
 
 body {
   margin: 0;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
   font-family: var(--sans);
   font-weight: 400;
   font-size: 16px;
@@ -850,51 +853,156 @@ h1, h2, h3, p { margin: 0; }
   .creds { grid-template-columns: 1fr; }
 }
 
+/* ---------- Tablet & phone ---------- */
 @media (max-width: 900px) {
+  :root { --section-pad: clamp(72px, 14vw, 104px); }
+
+  /* Navigation: backdrop-filter would trap the fixed menu inside the header,
+     so the scrolled bar uses a solid background on small screens. */
+  .nav { padding-block: 18px; }
+  .nav.is-scrolled {
+    padding-block: 12px;
+    background: rgba(255, 255, 255, 0.97);
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+  }
   .nav__toggle { display: block; }
   .nav__links {
     position: fixed;
     inset: 0;
     z-index: 101;
     flex-direction: column;
+    align-items: flex-start;
     justify-content: center;
-    gap: 34px;
+    gap: 6px;
+    padding: 96px var(--gutter) 48px;
     background: var(--white);
     opacity: 0;
     visibility: hidden;
-    transition: opacity 0.5s var(--ease), visibility 0.5s;
+    transform: translateY(-12px);
+    transition: opacity 0.5s var(--ease), transform 0.5s var(--ease), visibility 0.5s;
+    overflow-y: auto;
   }
-  .nav__links.is-open { opacity: 1; visibility: visible; }
-  .nav__links a { font-size: 0.85rem; }
+  .nav__links.is-open { opacity: 1; visibility: visible; transform: none; }
+  .nav__links a {
+    width: 100%;
+    padding-block: 12px;
+    font-family: var(--serif);
+    font-size: clamp(1.9rem, 8vw, 2.6rem);
+    font-weight: 400;
+    letter-spacing: 0;
+    text-transform: none;
+    color: var(--ink);
+    border-bottom: 1px solid var(--line);
+  }
+  .nav__links a:not(.nav__cta)::after { display: none; }
+  .nav__links a.is-active { color: var(--gold-deep); }
+  .nav__links .nav__cta {
+    width: auto;
+    margin-top: 28px;
+    padding: 16px 30px;
+    font-family: var(--sans);
+    font-size: 0.74rem;
+    font-weight: 600;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    border: 1px solid var(--ink);
+  }
   .nav__brand { position: relative; z-index: 102; }
 
+  /* Layout: single column */
   .hero__grid,
   .profile,
   .split-head,
   .role,
   .service,
   .contact { grid-template-columns: 1fr; }
+  .split-head { gap: 20px; }
   .role { gap: 16px; }
+  .service { gap: 28px; }
 
-  .hero { padding-block: 130px 120px; }
+  /* Hero */
+  .hero { min-height: 0; padding-block: 120px 72px; }
+  .hero__grid { gap: 64px; }
+  .hero__title { margin-top: 20px; }
+  .hero__lede { margin-top: 24px; }
+  .hero__actions { margin-top: 36px; }
   .portrait { justify-self: start; max-width: 380px; }
-  .facts { position: static; }
+  .portrait__caption { margin-top: 36px; }
   .scroll-cue { display: none; }
+
+  .facts { position: static; }
+  .band { padding-block: 18px; }
+  .band__track { gap: 28px; }
+  .band__track span { font-size: 1.2rem; }
 }
 
+/* ---------- Phone ---------- */
 @media (max-width: 560px) {
-  .nav__name { display: none; }
+  body { font-size: 15.5px; }
+  .nav__name { font-size: 1.12rem; }
+  .monogram { width: 38px; height: 38px; font-size: 0.95rem; }
+
+  .display { font-size: clamp(2.1rem, 9.4vw, 2.6rem); line-height: 1.1; }
+  .section__head { margin-bottom: 32px; gap: 14px; }
+  .section__head::after { flex-basis: 40px; }
+
+  .hero { padding-block: 104px 56px; }
+  .hero__title { font-size: clamp(3.1rem, 15vw, 4rem); }
+  .hero__lede { font-size: 1rem; line-height: 1.75; }
+  .hero__actions { flex-direction: column; }
+  .hero__actions .btn { width: 100%; }
+  .portrait { max-width: calc(100% - 14px); }
+  .portrait__frame::before { inset: 14px -14px -14px 14px; }
+  .portrait__caption { flex-direction: column; gap: 4px; }
+
+  .profile__body { margin-top: 32px; font-size: 1rem; }
+  .dropcap::first-letter { font-size: 4em; }
+  .facts { padding: 28px 22px; }
+
   .cards,
   .stats { grid-template-columns: 1fr; }
-  .stat + .stat { padding-left: 0; border-left: 0; border-top: 1px solid var(--line); }
+  .stat,
+  .stat + .stat { padding: 26px 0 22px; border-left: 0; }
+  .stat + .stat { border-top: 1px solid var(--line); }
+  .stat__value { font-size: 3.2rem; }
+  .card { padding: 32px 24px 36px; }
+  .card__num { margin-bottom: 24px; }
+
   .initiative,
-  .pub { grid-template-columns: 1fr; row-gap: 8px; }
-  .initiative__tag { grid-row: auto; }
-  .card__num { margin-bottom: 32px; }
-  .facts { padding: 32px 24px; }
-  .portrait__frame::before { inset: 14px -14px -14px 14px; }
-  .portrait { max-width: calc(100% - 14px); }
-  .portrait__caption { flex-direction: column; gap: 4px; }
-  .hero__actions .btn { flex: 1 1 100%; }
-  .footer__base { flex-direction: column; }
+  .pub { grid-template-columns: 1fr; row-gap: 8px; padding-block: 24px; }
+  .initiative__tag { grid-row: auto; padding-top: 0; }
+  .initiative h4 { font-size: 1.35rem; }
+
+  .role { padding-block: 32px; }
+  .role__date { font-size: 1.2rem; }
+  .role__body p,
+  .service__body,
+  .cred p { font-size: 0.98rem; }
+  .service__lead { font-size: 1.5rem; }
+
+  .pubs { margin-bottom: 32px; }
+  .pub__year { font-size: 1.15rem; }
+  .pub h3 { font-size: 1.3rem; }
+  .beyond { padding: 28px 22px; }
+  .beyond__text { font-size: 1.3rem; }
+
+  .contact__list { margin-top: 32px; gap: 22px; }
+  .contact__list dd { font-size: 1.2rem; }
+  .form .btn { justify-self: stretch; }
+
+  .footer { padding-block: 56px 28px; }
+  .footer__inner { flex-direction: column; align-items: flex-start; gap: 28px; padding-bottom: 32px; }
+  .footer__links,
+  .footer__social { gap: 14px 24px; }
+  .footer__base { flex-direction: column; gap: 14px; }
+}
+
+/* Touch devices: no hover lifts that stick after a tap */
+@media (hover: none) {
+  .btn:hover,
+  .btn--ghost:hover,
+  .social__list a:hover { transform: none; }
+  .card:hover { background: var(--white); }
+  .card:hover::before { transform: scaleX(0); }
 }

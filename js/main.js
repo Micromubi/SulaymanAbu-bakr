@@ -34,6 +34,9 @@
   document.addEventListener("keydown", function (e) {
     if (e.key === "Escape") setMenu(false);
   });
+  window.matchMedia("(min-width: 901px)").addEventListener("change", function (e) {
+    if (e.matches) setMenu(false);
+  });
 
   /* ---------- Reveal on scroll ---------- */
   var reveals = document.querySelectorAll(".reveal");
