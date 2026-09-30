@@ -121,7 +121,7 @@
   var form = document.getElementById("contactForm");
   var status = document.getElementById("formStatus");
 
-  form.addEventListener("submit", function (e) {
+  if (form) form.addEventListener("submit", function (e) {
     e.preventDefault();
     var valid = true;
 
@@ -148,6 +148,32 @@
     } else {
       status.textContent = "Online messaging is not yet available. Please use the contact details shown.";
     }
+  });
+
+  /* ---------- Highlights filter (media page) ---------- */
+  var filterButtons = document.querySelectorAll(".filter");
+  var entryEls = document.querySelectorAll(".entry");
+  var emptyNote = document.getElementById("entriesEmpty");
+
+  filterButtons.forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      var cat = btn.getAttribute("data-filter");
+      var shown = 0;
+      filterButtons.forEach(function (b) {
+        var on = b === btn;
+        b.classList.toggle("is-active", on);
+        b.setAttribute("aria-pressed", String(on));
+      });
+      entryEls.forEach(function (el) {
+        var match = cat === "all" || el.getAttribute("data-cat") === cat;
+        el.hidden = !match;
+        if (match) {
+          el.classList.add("is-visible");
+          shown++;
+        }
+      });
+      if (emptyNote) emptyNote.hidden = shown > 0;
+    });
   });
 
   /* ---------- Gallery lightbox ---------- */
