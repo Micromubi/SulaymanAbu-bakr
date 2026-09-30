@@ -176,6 +176,32 @@
     });
   });
 
+  /* ---------- Newsletter PDFs: show "coming soon" until the file is uploaded ---------- */
+  var pdfLinks = document.querySelectorAll(".js-pdf");
+  var pdfChecks = {};
+
+  function markPending(el) {
+    if (el.hasAttribute("data-pending-hide")) {
+      el.hidden = true;
+      return;
+    }
+    el.removeAttribute("href");
+    el.removeAttribute("download");
+    el.setAttribute("aria-disabled", "true");
+    el.classList.add("is-pending");
+    el.textContent = el.getAttribute("data-pending-label") || "Coming soon";
+  }
+
+  pdfLinks.forEach(function (el) {
+    var url = el.getAttribute("href");
+    if (!pdfChecks[url]) {
+      pdfChecks[url] = window.fetch
+        ? fetch(url, { method: "HEAD" }).then(function (r) { return r.ok; }, function () { return false; })
+        : Promise.resolve(true);
+    }
+    pdfChecks[url].then(function (ok) { if (!ok) markPending(el); });
+  });
+
   /* ---------- Gallery lightbox ---------- */
   var lightbox = document.getElementById("lightbox");
   var galleryButtons = Array.prototype.slice.call(document.querySelectorAll(".gallery__open"));
