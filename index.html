@@ -18,8 +18,10 @@
   <link rel="preload" href="fonts/cormorant-garamond.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="fonts/cormorant-garamond-italic.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="fonts/manrope.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="images/portrait.webp" as="image" type="image/webp" fetchpriority="high">
-  <link rel="stylesheet" href="css/styles.css?v=dfee9f93">
+  <link rel="preload" href="images/gallery/official-portrait.webp" as="image" type="image/webp" fetchpriority="high">
+  <link rel="stylesheet" href="css/styles.css?v=40f04571">
+  <link rel="stylesheet" href="css/home.css?v=bd4db520">
+
 
   <script type="application/ld+json">
 {
@@ -68,733 +70,124 @@
   }
   </script>
 </head>
-<body>
-  <a href="#profile" class="skip-link">Skip to content</a>
-
-  <!-- ============ NAVIGATION ============ -->
-  <header class="nav" id="nav">
-    <div class="nav__inner container">
-      <a href="#top" class="nav__brand" aria-label="Sulayman Abu-Bakr — home">
-        <span class="monogram">SA</span>
-        <span class="nav__name">Sulayman Abu-Bakr</span>
-      </a>
-      <nav class="nav__links" id="navLinks" aria-label="Primary">
-        <a href="#profile">Profile</a>
-        <a href="#experience">Experience</a>
-        <a href="#credentials">Credentials</a>
-        <a href="family.html">Legacy</a>
-        <a href="media.html">Media</a>
-        <a href="newsletters.html">Newsletters</a>
-        <a href="#contact" class="nav__cta">Get in Touch</a>
-      </nav>
-      <button class="nav__toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
-        <span></span><span></span>
-      </button>
-    </div>
-  </header>
-
+<body class="home">
   <main id="top">
 
-    <!-- ============ HERO ============ -->
-    <section class="hero">
-      <div class="hero__glow" aria-hidden="true"></div>
-      <div class="container hero__grid">
-        <div class="hero__text">
-          <p class="eyebrow rise">Health Systems Strengthening &amp; Health Informatics</p>
-          <h1 class="hero__title rise">
-            Sulayman<br>
-            <em>Abu-Bakr</em><span class="hero__post">MPH</span>
-          </h1>
-          <p class="hero__lede rise">
-            Over a decade driving national health policy, primary health care transformation,
-            digital health and health insurance reform in Nigeria. Now leading the expansion of
-            universal health coverage across Niger State.
-          </p>
-          <div class="hero__actions rise">
-            <a href="#impact" class="btn btn--dark">View His Impact</a>
-            <a href="#contact" class="btn btn--ghost">Get in Touch</a>
-          </div>
-        </div>
-
-        <figure class="portrait rise">
-          <div class="portrait__frame">
-            <picture>
-              <source srcset="images/portrait.webp" type="image/webp">
-              <img src="images/portrait.jpg" alt="Portrait of Sulayman Abu-Bakr, MPH" class="portrait__img"
-                   width="500" height="538" fetchpriority="high"
-                   onerror="this.closest('picture').remove()">
-            </picture>
-            <div class="portrait__fallback" aria-hidden="true">
-              <span>SA</span>
-            </div>
-          </div>
-          <figcaption class="portrait__caption">
-            <span>Executive Secretary / CEO, NiCare</span>
-            <span>Minna, Nigeria</span>
-          </figcaption>
-        </figure>
+    <!-- ============ HOME HERO: the scorecard ============ -->
+    <section class="ledger" aria-label="Introduction">
+      <div class="ledger__inner">
+        <h1 class="ledger__name">Sulayman Abu-Bakr</h1>
+        <ul class="ledger__roles" role="tablist" aria-label="Areas of work">
+          <li><button type="button" class="ledger__role is-active" role="tab" aria-selected="true" aria-controls="stage" data-role="0">public health</button></li>
+          <li><button type="button" class="ledger__role" role="tab" aria-selected="false" aria-controls="stage" data-role="1">health insurance</button></li>
+          <li><button type="button" class="ledger__role" role="tab" aria-selected="false" aria-controls="stage" data-role="2">health informatics</button></li>
+        </ul>
       </div>
-
-      <a href="#profile" class="scroll-cue" aria-label="Scroll to profile">
-        <span>Scroll</span><i></i>
-      </a>
     </section>
 
-    <!-- ============ COMPETENCY BAND ============ -->
-    <div class="band" aria-label="Core competencies">
-      <div class="band__track">
-        <span>Health Systems Strengthening</span><b>◆</b>
-        <span>Health Insurance &amp; Financing</span><b>◆</b>
-        <span>Digital Health</span><b>◆</b>
-        <span>Policy Development</span><b>◆</b>
-        <span>Monitoring &amp; Evaluation</span><b>◆</b>
-        <span>DHIS2 Administration</span><b>◆</b>
-        <span>Data Analytics</span><b>◆</b>
-        <span aria-hidden="true">Health Systems Strengthening</span><b aria-hidden="true">◆</b>
-        <span aria-hidden="true">Health Insurance &amp; Financing</span><b aria-hidden="true">◆</b>
-        <span aria-hidden="true">Digital Health</span><b aria-hidden="true">◆</b>
-        <span aria-hidden="true">Policy Development</span><b aria-hidden="true">◆</b>
-        <span aria-hidden="true">Monitoring &amp; Evaluation</span><b aria-hidden="true">◆</b>
-        <span aria-hidden="true">DHIS2 Administration</span><b aria-hidden="true">◆</b>
-        <span aria-hidden="true">Data Analytics</span><b aria-hidden="true">◆</b>
+    <section class="stage" id="stage" aria-live="polite">
+      <nav class="stage__nav" aria-label="Sections">
+        <a href="profile.html">About</a>
+        <a href="writing.html">Writing</a>
+        <a href="family.html">Legacy</a>
+        <a href="media.html">Media</a>
+        <a href="profile.html#contact">Contact</a>
+      </nav>
+
+      <div class="stage__panel is-active" data-panel="0">
+        <picture>
+          <source type="image/webp" srcset="images/gallery/official-portrait.webp">
+          <img src="images/gallery/official-portrait.jpg" alt="Sulayman Abu-Bakr" class="stage__img stage__img--portrait" fetchpriority="high">
+        </picture>
+        <div class="stage__copy">
+          <p class="stage__line">Sulayman Abu-Bakr is a public health leader with over a decade in Nigeria's health system.</p>
+          <a href="profile.html" class="stage__link">More about Sulayman <span aria-hidden="true">↗</span></a>
+        </div>
       </div>
-    </div>
 
-    <!-- ============ 01 PROFILE ============ -->
-    <section class="section" id="profile">
-      <div class="container">
-        <header class="section__head reveal">
-          <span class="section__num">01</span>
-          <p class="eyebrow">Profile</p>
-        </header>
+      <div class="stage__panel" data-panel="1">
+        <picture>
+          <source type="image/webp" srcset="images/gallery/vulnerable-enrolment-drive-2026-800.webp 800w, images/gallery/vulnerable-enrolment-drive-2026.webp 1600w" sizes="100vw">
+          <img src="images/gallery/vulnerable-enrolment-drive-2026.jpg" alt="Launch of the NiCare enrolment drive for vulnerable residents" class="stage__img" loading="lazy">
+        </picture>
+        <div class="stage__copy">
+          <p class="stage__line">He leads the Niger State Contributory Health Agency, where enrolment grew 83.3% in two years.</p>
+          <a href="profile.html" class="stage__link">See the impact <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
 
-        <div class="profile">
-          <div class="profile__main">
-            <h2 class="display reveal">Where health policy<br><em>meets technology.</em></h2>
-
-            <div class="profile__body">
-              <p class="dropcap reveal">
-                Sulayman Abu-Bakr is a health informatics and health systems strengthening leader with
-                more than ten years of progressive experience in Nigeria's health sector. His work spans
-                national health policy, primary health care (PHC) transformation, ICT integration and
-                health insurance reform.
-              </p>
-              <p class="reveal">
-                As Executive Secretary and CEO of the Niger State Contributory Health Agency (NiCare)
-                since 4 January 2024, he has grown health insurance enrolment by 83.3%, and the Agency has
-                been recognised nationally as one of the top five performing state social health
-                insurance agencies.
-              </p>
-              <p class="reveal">
-                Before NiCare, he spent nearly a decade at the National Primary Health Care Development
-                Agency (NPHCDA). There he led large-scale digital health initiatives, including the
-                Electronic Management of Immunization Data (EMID) system and the deployment of the DHIS2
-                platform. His training in business information systems and public health lets him
-                work across policy, technology and data, with a consistent focus on measurable
-                improvements in healthcare access and quality.
-              </p>
-            </div>
-          </div>
-
-          <aside class="facts reveal" aria-label="At a glance">
-            <p class="facts__title">At a Glance</p>
-            <dl>
-              <div><dt>Current Role</dt><dd>Executive Secretary / CEO, NiCare</dd></div>
-              <div><dt>Experience</dt><dd>10+ years in health systems &amp; digital health</dd></div>
-              <div><dt>Education</dt><dd>MPH (Distinction), Nile University<br>BSc Business Information Systems, University of East London</dd></div>
-              <div><dt>Fellowship</dt><dd>US CDC GEEKS Fellow, 2019–2020</dd></div>
-              <div><dt>Based In</dt><dd>Minna, Niger State, Nigeria</dd></div>
-            </dl>
-          </aside>
+      <div class="stage__panel stage__panel--type" data-panel="2">
+        <div class="stage__copy">
+          <p class="stage__line">He built national immunisation data systems, then brought digital claims and AI-supported tracking to NiCare.</p>
+          <a href="profile.html#experience" class="stage__link">Read his career <span aria-hidden="true">↗</span></a>
         </div>
       </div>
     </section>
 
-    <!-- ============ IN HIS WORDS ============ -->
-    <section class="words" aria-label="In his words">
-      <div class="container">
-        <p class="eyebrow reveal">In His Words</p>
-        <div class="words__grid">
-          <blockquote class="quote quote--lead reveal">
-            <p>Universal Health Coverage, to me, has always been a <em>political decision</em> before it is a technical one.</p>
-            <footer>Sulayman Abu-Bakr, 2026</footer>
-          </blockquote>
-          <blockquote class="quote reveal">
-            <p>Technology adoption is only half the story. The real work is building the institutional readiness (data, people, systems, leadership) to use it responsibly.</p>
-            <footer>On leading public sector transformation, Kigali, 2026</footer>
-          </blockquote>
-          <blockquote class="quote reveal">
-            <p>Enrolment numbers don't move on policy alone. They move when trusted voices carry the message into every ward, every household, every family.</p>
-            <footer>On NiCare's health insurance ambassadors, 2026</footer>
-          </blockquote>
-        </div>
+
+    <!-- ============ QUIET HOME ============ -->
+    <section class="q-intro">
+      <div class="q-wrap">
+        <p class="q-lead">
+          For over a decade, Sulayman Abu-Bakr has worked where health policy meets data: first building
+          national immunisation and health information systems at the National Primary Health Care
+          Development Agency, and since January 2024 leading the Niger State Contributory Health Agency
+          toward universal health coverage.
+        </p>
+        <a href="profile.html" class="q-link">Full biography <span aria-hidden="true">↗</span></a>
       </div>
     </section>
 
-    <!-- ============ 02 IMPACT ============ -->
-    <section class="section" id="impact">
-      <div class="container">
-        <header class="section__head reveal">
-          <span class="section__num">02</span>
-          <p class="eyebrow">Impact at NiCare</p>
-        </header>
-        <div class="split-head">
-          <h2 class="display reveal">Expanding coverage.<br><em>Delivering results.</em></h2>
-          <p class="split-head__copy reveal">
-            Since January 2024, NiCare has widened access to health insurance across Niger
-            State, with a focus on the most vulnerable.
-          </p>
-        </div>
-
-        <div class="stats">
-          <div class="stat reveal">
-            <p class="stat__value"><span data-count="83.3" data-decimals="1">83.3</span>%</p>
-            <p class="stat__label">Growth in enrolment</p>
-            <p class="stat__detail">From 86,880 enrollees in 2023 to 159,289 in 2025</p>
-          </div>
-          <div class="stat reveal">
-            <p class="stat__value">~<span data-count="685">685</span>%</p>
-            <p class="stat__label">Growth in coverage for vulnerable persons</p>
-            <p class="stat__detail">From 3,816 in 2023 to 26,155 in 2025</p>
-          </div>
-          <div class="stat reveal">
-            <p class="stat__value"><span data-count="1252" data-separator>1,252</span></p>
-            <p class="stat__label">Formal sector &amp; appointee enrollees</p>
-            <p class="stat__detail">Scaled from zero, including the Governor and Deputy Governor</p>
-          </div>
-          <div class="stat reveal">
-            <p class="stat__value">Top <span data-count="5">5</span></p>
-            <p class="stat__label">National recognition</p>
-            <p class="stat__detail">Among the best-performing state social health insurance agencies</p>
-          </div>
-        </div>
-
-        <h3 class="subhead reveal">Key Initiatives</h3>
-        <div class="initiatives">
-          <article class="initiative reveal">
-            <span class="initiative__tag">Coverage</span>
-            <h4>New Insurance Schemes</h4>
-            <p>Launched schemes for inmates and retirees, and a Gavi/UNICEF/CHAI-supported health insurance package for women and children.</p>
-          </article>
-          <article class="initiative reveal">
-            <span class="initiative__tag">Coverage</span>
-            <h4>TISHIP</h4>
-            <p>Launched the Tertiary Institutions Social Health Insurance Programme, making healthcare more affordable for students.</p>
-          </article>
-          <article class="initiative reveal">
-            <span class="initiative__tag">Digital</span>
-            <h4>NiFMS, e-Claims &amp; e-Voucher</h4>
-            <p>Established ICT governance, launched the NiCare Fund Management System and deployed a new e-Claims and e-Voucher system.</p>
-          </article>
-          <article class="initiative reveal">
-            <span class="initiative__tag">Digital</span>
-            <h4>AI-Supported Enrollee Tracking</h4>
-            <p>Introduced the AI-supported Clinify platform for tracking enrollees.</p>
-          </article>
-          <article class="initiative reveal">
-            <span class="initiative__tag">Governance</span>
-            <h4>Organisational Reform</h4>
-            <p>Restructured the Agency and introduced claims-management SOPs, stronger internal controls and better financial management systems.</p>
-          </article>
-          <article class="initiative reveal">
-            <span class="initiative__tag">Governance</span>
-            <h4>Performance &amp; Data Protection</h4>
-            <p>Built an M&amp;E system for organisational and staff performance, and strengthened compliance with the Nigeria Data Protection Act.</p>
-          </article>
-          <article class="initiative reveal">
-            <span class="initiative__tag">Partnership</span>
-            <h4>Private Sector &amp; TPA Partnerships</h4>
-            <p>Expanded partnerships with private providers and Third Party Administrators to improve how schemes are delivered.</p>
-          </article>
-          <article class="initiative reveal">
-            <span class="initiative__tag">Community</span>
-            <h4>Transparency &amp; Engagement</h4>
-            <p>Made engagement with traditional and religious leaders and Ward Development Committees a standing practice, introduced regular media briefings and digitised beneficiary feedback.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ 03 EXPERIENCE ============ -->
-    <section class="section" id="experience">
-      <div class="container">
-        <header class="section__head reveal">
-          <span class="section__num">03</span>
-          <p class="eyebrow">Experience</p>
-        </header>
-        <h2 class="display reveal">A career built on<br><em>public service.</em></h2>
-
-        <div class="timeline">
-          <article class="role reveal">
-            <div class="role__meta">
-              <p class="role__date">Jan 2024 — Present</p>
-              <p class="role__org">Niger State Contributory Health Agency (NiCare)</p>
-              <a href="https://nicare.nigerstate.gov.ng/" class="link-arrow" target="_blank" rel="noopener">
-                Visit NiCare <span aria-hidden="true">→</span>
-              </a>
-            </div>
-            <div class="role__body">
-              <h3>Executive Secretary / Chief Executive Officer</h3>
-              <p>
-                Sulayman leads the Agency's day-to-day administration and staff, with universal health
-                coverage for Niger State as the goal. Under his leadership, enrolment grew by 83.3% and
-                coverage for vulnerable persons by approximately 685% between 2023 and 2025. He has
-                introduced schemes for students, inmates and retirees, and a Gavi/UNICEF/CHAI-supported
-                package for women and children. He also restructured the Agency, digitised its claims and
-                fund management, and oversees its budget so that programmes stay financially sustainable
-                and in line with national health policy.
-              </p>
-            </div>
-          </article>
-
-          <article class="role reveal">
-            <div class="role__meta">
-              <p class="role__date">Jan 2021 — Jan 2024</p>
-              <p class="role__org">National Primary Health Care Development Agency (NPHCDA)</p>
-            </div>
-            <div class="role__body">
-              <h3>Senior Program Analyst</h3>
-              <p>
-                As Senior Program Analyst, he led the data analysis and systems design behind the Agency's
-                new and existing data processing systems. He strengthened the primary health care system
-                by deploying ICT solutions for data management, led the Electronic Management of
-                Immunization Data (EMID) activities, and provided training and technical support to states
-                and Local Government Areas. In 2024 he was promoted to Assistant Chief Program Analyst in
-                recognition of his sustained performance.
-              </p>
-            </div>
-          </article>
-
-          <article class="role reveal">
-            <div class="role__meta">
-              <p class="role__date">Jan 2018 — Jan 2021</p>
-              <p class="role__org">National Primary Health Care Development Agency (NPHCDA)</p>
-            </div>
-            <div class="role__body">
-              <h3>Program Analyst I</h3>
-              <p>
-                In this period he developed tools for the Basic Health Care Provision Fund (BHCPF) NPHCDA
-                Gateway. During the pandemic he supported the NPHCDA COVID-19 Crisis Management Centre,
-                building health information management tools for community support centres. He was also
-                selected as a Fellow of the US CDC's Growing Expertise in E-Health Knowledge and Skills
-                (GEEKS) programme, where he managed the national DHIS2 backend server and led DHIS2 system
-                administration training.
-              </p>
-            </div>
-          </article>
-
-          <article class="role reveal">
-            <div class="role__meta">
-              <p class="role__date">Dec 2014 — Jan 2018</p>
-              <p class="role__org">National Primary Health Care Development Agency (NPHCDA)</p>
-            </div>
-            <div class="role__body">
-              <h3>Program Analyst II</h3>
-              <p>
-                He began his career at NPHCDA developing the scorecard for implementing the Primary Health
-                Care Under One Roof (PHCUOR) initiative and managing IT solutions and reporting for the
-                Executive Director's office. He also built the Agency's social media presence into an
-                advocacy tool, coordinating initiatives with development partners including UNICEF, WHO
-                and EU-SIGN.
-              </p>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ 04 EXPERTISE ============ -->
-    <section class="section" id="expertise">
-      <div class="container">
-        <header class="section__head reveal">
-          <span class="section__num">04</span>
-          <p class="eyebrow">Expertise</p>
-        </header>
-        <div class="split-head">
-          <h2 class="display reveal">Depth across the<br><em>whole health system.</em></h2>
-          <p class="split-head__copy reveal">
-            His work links policy, financing, technology and data, so that health
-            programmes are effective and sustainable.
-          </p>
-        </div>
-
-        <div class="cards">
-          <article class="card reveal">
-            <span class="card__num">I</span>
-            <h3>Health Systems Strengthening</h3>
-            <p>PHC revitalisation, organisational restructuring and change leadership.</p>
-          </article>
-          <article class="card reveal">
-            <span class="card__num">II</span>
-            <h3>Health Insurance &amp; Financing</h3>
-            <p>Scheme design and administration, health financing, budget oversight and strategy for universal health coverage.</p>
-          </article>
-          <article class="card reveal">
-            <span class="card__num">III</span>
-            <h3>Digital Health &amp; Informatics</h3>
-            <p>DHIS2 administration, EMID, e-Claims platforms and ICT governance for public health agencies.</p>
-          </article>
-          <article class="card reveal">
-            <span class="card__num">IV</span>
-            <h3>Policy &amp; Governance</h3>
-            <p>Public health policy development, implementation, and regulatory and policy compliance.</p>
-          </article>
-          <article class="card reveal">
-            <span class="card__num">V</span>
-            <h3>Monitoring, Evaluation &amp; Data</h3>
-            <p>M&amp;E systems, data governance and analytics that support evidence-based decisions.</p>
-          </article>
-          <article class="card reveal">
-            <span class="card__num">VI</span>
-            <h3>Program &amp; Project Management</h3>
-            <p>Leading large, multi-stakeholder health programmes from design to delivery.</p>
-          </article>
-          <article class="card reveal">
-            <span class="card__num">VII</span>
-            <h3>Partnerships</h3>
-            <p>Public–private and donor partnerships with organisations including WHO, UNICEF and UNDP.</p>
-          </article>
-          <article class="card reveal">
-            <span class="card__num">VIII</span>
-            <h3>Capacity Building</h3>
-            <p>Training health workers and government teams in data management and digital systems.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ 05 LEADERSHIP & SERVICE ============ -->
-    <section class="section" id="leadership">
-      <div class="container">
-        <header class="section__head reveal">
-          <span class="section__num">05</span>
-          <p class="eyebrow">Leadership &amp; Service</p>
-        </header>
-        <div class="split-head">
-          <h2 class="display reveal">Shaping health policy<br><em>at the table.</em></h2>
-          <p class="split-head__copy reveal">
-            He serves on technical working groups and committees that guide health financing,
-            disease control and emergency response in Niger State and nationally.
-          </p>
-        </div>
-
-        <div class="service">
-          <p class="service__lead reveal">
-            Sulayman chairs the <em>Niger State Health Financing Technical Working Group</em> and sits on
-            the Basic Health Care Provision Fund State Oversight Committee and the UNDP North-West &amp;
-            Niger State Steering Committee.
-          </p>
-          <div class="service__body">
-            <p class="reveal">
-              In Niger State, he is a member of the Viral Hepatitis Technical Working Group, the State
-              Emergency Treatment Committees, and the State Emergency Medical Service and Ambulance
-              System. He also served on the coordination committee for the 2025 Integrated
-              Insecticide-Treated Nets Replacement and Seasonal Malaria Chemoprevention Campaign.
-            </p>
-            <p class="reveal">
-              At national level, he was part of the strategy group for Nigeria's COVID-19 vaccination
-              rollout (COVAX). He has also served on the Monitoring &amp; Evaluation Technical Working
-              Group, the PHC Facilities Assessment Team, and the teams responsible for implementing EMID
-              and the routine immunization transition.
-            </p>
-            <p class="reveal">
-              In May 2026 he co-organised, with the Niger State Ministry of Health and World Bank support,
-              a two-day policy dialogue in Bida on advancing universal health coverage through strategic
-              leadership by Local Government Areas.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ 06 CREDENTIALS ============ -->
-    <section class="section" id="credentials">
-      <div class="container">
-        <header class="section__head reveal">
-          <span class="section__num">06</span>
-          <p class="eyebrow">Education &amp; Credentials</p>
-        </header>
-        <h2 class="display reveal">A foundation in<br><em>health and technology.</em></h2>
-
-        <div class="creds">
-          <div class="cred reveal">
-            <h3 class="subhead">Education</h3>
-            <p>
-              Sulayman holds a Master of Public Health from Nile University of Nigeria, awarded with
-              Distinction in 2023, where he also served as course representative for his cohort. His
-              academic foundation is in technology: a BSc in Business Information Systems from the
-              University of East London (2010–2013), followed by Coventry University's Master's
-              Qualifying Programme in 2013.
-            </p>
-          </div>
-          <div class="cred reveal">
-            <h3 class="subhead">Continuing Development</h3>
-            <p>
-              He continues to build on this foundation. In 2026 he took part in the African Centre for
-              Tax and Governance executive programme <em>Leading Public Sector Transformation in the Age
-              of Artificial Intelligence</em> in Kigali, Rwanda. In 2025 he completed <em>Futures for Public
-              Policy</em> at the Lee Kuan Yew School of Public Policy, National University of Singapore,
-              and <em>Health Financing Policy for Universal Health Coverage</em> with the World Health
-              Organization. He trained in artificial intelligence in health insurance in 2024 and
-              completed Tiers 1 and 2 of the US CDC's GEEKS programme in 2020. He participated in the
-              First International Conference on Public Health in Africa, convened by the African Union and
-              Africa CDC in 2021, and studied social media in healthcare at Taipei Medical University
-              and the University of Southampton in 2017. In 2026 he became a member of the European
-              Centre for Research Training and Development UK.
-            </p>
-          </div>
-          <div class="cred reveal">
-            <h3 class="subhead">Recognition</h3>
-            <p>
-              Under his leadership, NiCare has been recognised nationally as one of the top five performing
-              state social health insurance agencies. In September 2026 he received a Certificate of
-              Recognition from the Female Director Generals of Niger State at their Awards &amp;
-              Appreciation Dinner in Minna, and an Award of Excellence from the Niger State National Health
-              Fellows for strengthening healthcare delivery. In 2025 Crusader Radio, Minna, presented him
-              with its Award for Excellence in Service to Humanity at its 7th Anniversary Awards. Earlier in his career, NPHCDA awarded him a
-              Certificate of Recognition in 2020, and he was selected as a US CDC GEEKS Fellow for
-              2019–2020.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ 07 RESEARCH ============ -->
-    <section class="section" id="research">
-      <div class="container">
-        <header class="section__head reveal">
-          <span class="section__num">07</span>
-          <p class="eyebrow">Research &amp; Publications</p>
-        </header>
-        <h2 class="display reveal">Contributing to the<br><em>evidence base.</em></h2>
-
-        <ol class="pubs">
-          <li class="pub reveal">
-            <span class="pub__year">2026</span>
-            <div>
-              <h3><a href="https://doi.org/10.37745/ijphpp.15/vol11n12441" target="_blank" rel="noopener">Users' Perspective of the Implementation of District Health Information System Version 2 (DHIS2) in Nigeria</a></h3>
-              <p class="pub__meta">Abu-bakr, S., Mari Aya, B., et al. <span>International Journal of Public Health, Pharmacy and Pharmacology</span></p>
-            </div>
-          </li>
-          <li class="pub reveal">
-            <span class="pub__year">2022</span>
-            <div>
-              <h3><a href="https://www.researchgate.net/publication/366953324_Strengthening_capacity_of_government_workforce_on_the_management_triangulation_and_use_of_data_for_informed_decision-making_in_Nigeria_2021" target="_blank" rel="noopener">Strengthening Capacity of Government Workforce on the Management, Triangulation and Use of Data for Informed Decision-Making in Nigeria, 2021</a></h3>
-              <p class="pub__meta">Adeoye, O.B., Waziri, N.E., Adah, G., et al. (incl. Abu-bakr, S.) <span>Conference Paper</span></p>
-            </div>
-          </li>
-          <li class="pub reveal">
-            <span class="pub__year">2020</span>
-            <div>
-              <h3><a href="https://www.researchgate.net/publication/343254923_Strengthening_Government_capacity_for_routine_immunization_data_management_using_the_GEEKS_Approach_in_Nigeria" target="_blank" rel="noopener">Strengthening Government Capacity for Routine Immunization Data Management Using the GEEKS Approach in Nigeria</a></h3>
-              <p class="pub__meta">Garba, A.B., Obasi, S., Dagoe, E., et al. (incl. Abu-bakr, S.) <span>Journal of Health Informatics in Africa / HELINA Conference</span></p>
-            </div>
-          </li>
-          <li class="pub reveal">
-            <span class="pub__year">2019</span>
-            <div>
-              <h3>Emergence of Government-Driven Health Informatics in Nigeria's Primary Health Care System</h3>
-              <p class="pub__meta">Poster presentation <span>Pan-Africa Health Informatics (HELINA) Conference, Gaborone, Botswana</span></p>
-            </div>
-          </li>
-        </ol>
-
-        <a href="https://www.researchgate.net/profile/Sulayman_Abu-Bakr" class="link-arrow reveal" target="_blank" rel="noopener">
-          View on ResearchGate <span aria-hidden="true">→</span>
+    <section class="q-index" aria-label="Explore">
+      <div class="q-wrap q-grid">
+        <a href="profile.html" class="q-item">
+          <span class="q-item__label">About</span>
+          <span class="q-item__text">His life and career, from Lapai and London to the leadership of NiCare.</span>
         </a>
-
-
+        <a href="writing.html" class="q-item">
+          <span class="q-item__label">Writing</span>
+          <span class="q-item__text">Research on health information systems, public letters and strategy.</span>
+        </a>
+        <a href="family.html" class="q-item">
+          <span class="q-item__label">Legacy</span>
+          <span class="q-item__text">Three generations of public service, and the Sule Lapai Foundation.</span>
+        </a>
+        <a href="media.html" class="q-item">
+          <span class="q-item__label">Media</span>
+          <span class="q-item__text">Recognition, speaking, photographs and selected press.</span>
+        </a>
       </div>
     </section>
 
-    <!-- ============ FAMILY & LEGACY (preview — full page in family.html) ============ -->
-    <section class="personal" id="personal" aria-label="Family and legacy">
-      <div class="container">
-        <p class="eyebrow reveal">Family &amp; Legacy</p>
-        <div class="personal__grid">
-          <h2 class="display reveal">Grounded by family,<br><em>driven by service.</em></h2>
-          <div class="personal__body">
-            <blockquote class="quote reveal">
-              <p>The unrelenting support of my wife and family keeps me grounded.</p>
-              <footer>NiCare Newsletter, Vol. 1, 2025</footer>
-            </blockquote>
-            <p class="reveal">
-              Read about his family, the institution he is building at NiCare, and how colleagues,
-              peers and staff describe his leadership.
-            </p>
-            <a href="family.html" class="btn btn--dark reveal">Family &amp; Legacy</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ 08 MEDIA (preview — full page in media.html) ============ -->
-    <section class="section" id="media">
-      <div class="container">
-        <header class="section__head reveal">
-          <span class="section__num">08</span>
-          <p class="eyebrow">Media &amp; Highlights</p>
-        </header>
-        <div class="split-head">
-          <h2 class="display reveal">In the field<br><em>and in the news.</em></h2>
-          <p class="split-head__copy reveal">
-            Recognition, events, partnerships and press coverage from his work across
-            Niger State and beyond.
-          </p>
-        </div>
-
-        <div class="teaser">
-          <a href="media.html#photos" class="teaser__photo reveal" aria-label="View photos">
-            <picture>
-              <source type="image/webp" srcset="images/gallery/vulnerable-enrolment-drive-2026-800.webp 800w, images/gallery/vulnerable-enrolment-drive-2026.webp 1600w" sizes="(max-width: 900px) 100vw, 50vw">
-              <img src="images/gallery/vulnerable-enrolment-drive-2026.jpg" alt="Launch of the NiCare enrolment drive for vulnerable residents with the First Lady of Niger State"
-                   width="1600" height="1200" loading="lazy" decoding="async">
-            </picture>
-            <span class="teaser__photo-label">Photos &amp; highlights →</span>
-          </a>
-          <div>
-            <ul class="teaser__list">
-          <li class="teaser__item reveal">
-            <a href="media.html#highlights">
-              <span class="teaser__date">Sep 2026</span>
-              <span class="teaser__tag">Recognition</span>
-              <span class="teaser__title">Certificate of Recognition from the Female Director Generals of Niger State</span>
-            </a>
-          </li>
-          <li class="teaser__item reveal">
-            <a href="media.html#highlights">
-              <span class="teaser__date">Aug 2026</span>
-              <span class="teaser__tag">Coverage</span>
-              <span class="teaser__title">First Lady and 25 LGA Vice Chairpersons unveiled as Health Insurance Ambassadors</span>
-            </a>
-          </li>
-          <li class="teaser__item reveal">
-            <a href="media.html#highlights">
-              <span class="teaser__date">Aug 2026</span>
-              <span class="teaser__tag">Executive Education</span>
-              <span class="teaser__title">Leading Public Sector Transformation in the Age of Artificial Intelligence</span>
-            </a>
-          </li>
-            </ul>
-            <a href="media.html" class="btn btn--dark teaser__cta reveal">View All Media &amp; Highlights</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ 09 CONTACT ============ -->
-    <section class="section" id="contact">
-      <div class="container">
-        <header class="section__head reveal">
-          <span class="section__num">09</span>
-          <p class="eyebrow">Contact</p>
-        </header>
-
-        <div class="contact">
-          <div class="contact__info reveal">
-            <h2 class="display">Let's start a<br><em>conversation.</em></h2>
-            <p class="contact__intro">
-              For partnerships, speaking engagements, media and professional enquiries,
-              please get in touch.
-            </p>
-            <dl class="contact__list">
-              <div>
-                <dt>Official Email</dt>
-                <dd><a href="mailto:sulayman.abu-bakr@nigerstate.gov.ng">sulayman.abu-bakr@nigerstate.gov.ng</a></dd>
-              </div>
-              <div>
-                <dt>Personal Email</dt>
-                <dd><a href="mailto:sulaymanbakr@gmail.com">sulaymanbakr@gmail.com</a></dd>
-              </div>
-              <div>
-                <dt>LinkedIn</dt>
-                <dd><a href="https://www.linkedin.com/in/sulayman-abu-bakr-mph-1808b078/" target="_blank" rel="noopener">linkedin.com/in/sulayman-abu-bakr-mph</a></dd>
-              </div>
-              <div>
-                <dt>Location</dt>
-                <dd>Minna, Niger State, Nigeria</dd>
-              </div>
-            </dl>
-
-            <!-- PLACEHOLDERS: replace href="#" on X, Facebook and Instagram with the real profile URLs -->
-            <div class="social">
-              <p class="social__label">Follow</p>
-              <ul class="social__list">
-                <li><a href="https://www.linkedin.com/in/sulayman-abu-bakr-mph-1808b078/" target="_blank" rel="noopener" aria-label="LinkedIn">
-                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>
-                </a></li>
-                <li><a href="#" target="_blank" rel="noopener" aria-label="X (Twitter)">
-                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.9 1.15h3.68l-8.04 9.19L24 22.85h-7.4l-5.8-7.58-6.64 7.58H.48l8.6-9.83L0 1.15h7.59l5.24 6.93 6.07-6.93zm-1.29 19.5h2.04L6.48 3.24H4.3l13.31 17.41z"/></svg>
-                </a></li>
-                <li><a href="#" target="_blank" rel="noopener" aria-label="Facebook">
-                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 22v-8.2h2.77l.41-3.2H13.5V8.56c0-.93.26-1.56 1.59-1.56h1.7V4.14A22.6 22.6 0 0 0 14.31 4c-2.45 0-4.13 1.5-4.13 4.24v2.36H7.4v3.2h2.78V22h3.32z"/></svg>
-                </a></li>
-                <li><a href="#" target="_blank" rel="noopener" aria-label="Instagram">
-                  <svg viewBox="0 0 24 24" aria-hidden="true" class="is-stroke"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r="0.6"/></svg>
-                </a></li>
-              </ul>
-            </div>
-          </div>
-
-          <form class="form reveal" id="contactForm" novalidate>
-            <div class="field">
-              <input type="text" id="name" name="name" placeholder=" " required autocomplete="name">
-              <label for="name">Full Name</label>
-            </div>
-            <div class="field">
-              <input type="email" id="email" name="email" placeholder=" " required autocomplete="email">
-              <label for="email">Email Address</label>
-            </div>
-            <div class="field">
-              <input type="text" id="subject" name="subject" placeholder=" ">
-              <label for="subject">Subject</label>
-            </div>
-            <div class="field">
-              <textarea id="message" name="message" rows="4" placeholder=" " required></textarea>
-              <label for="message">Message</label>
-            </div>
-            <button type="submit" class="btn btn--dark">Send Message</button>
-            <p class="form__status" id="formStatus" role="status" aria-live="polite"></p>
-          </form>
-        </div>
+    <section class="q-contact">
+      <div class="q-wrap">
+        <p>Get in touch: <a href="mailto:sulayman.abu-bakr@nigerstate.gov.ng">sulayman.abu-bakr@nigerstate.gov.ng</a></p>
+        <p class="q-muted"><a href="https://www.linkedin.com/in/sulayman-abu-bakr-mph-1808b078/" target="_blank" rel="noopener">LinkedIn</a> · <a href="media.html">Media</a> · Minna, Niger State</p>
       </div>
     </section>
   </main>
 
-  <!-- ============ FOOTER ============ -->
-  <footer class="footer">
-    <div class="container footer__inner">
-      <div class="footer__brand">
-        <span class="monogram monogram--lg">SA</span>
-        <div>
-          <p class="footer__name">Sulayman Abu-Bakr, MPH</p>
-          <p class="footer__role">Health Systems Strengthening &amp; Health Informatics Leader</p>
-        </div>
-      </div>
-      <nav class="footer__links" aria-label="Footer">
-        <a href="#profile">Profile</a>
-        <a href="#experience">Experience</a>
-        <a href="#credentials">Credentials</a>
-        <a href="family.html">Legacy</a>
-        <a href="media.html">Media</a>
-        <a href="newsletters.html">Newsletters</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </div>
-    <div class="container footer__base">
-      <p>© <span id="year"></span> Sulayman Abu-Bakr. All rights reserved.</p>
-      <!-- PLACEHOLDERS: replace href="#" on X, Facebook and Instagram with the real profile URLs -->
-      <nav class="footer__social" aria-label="Social media">
-        <a href="https://www.linkedin.com/in/sulayman-abu-bakr-mph-1808b078/" target="_blank" rel="noopener">LinkedIn</a>
-        <a href="#" target="_blank" rel="noopener">X</a>
-        <a href="#" target="_blank" rel="noopener">Facebook</a>
-        <a href="#" target="_blank" rel="noopener">Instagram</a>
-      </nav>
-      <a href="#top" class="to-top">Back to top ↑</a>
+  <footer class="q-footer">
+    <div class="q-wrap">
+      <span>© <span id="year"></span> Sulayman Abu-Bakr</span>
     </div>
   </footer>
 
-  <script src="js/main.js?v=edb835c2" defer></script>
+  <script>
+    /* Home: click a role to switch the panel. No auto-rotation. */
+    (function () {
+      var roles = [].slice.call(document.querySelectorAll('.ledger__role'));
+      var panels = [].slice.call(document.querySelectorAll('.stage__panel'));
+      var current = 0;
+      function select(i, draw) {
+        current = i;
+        roles.forEach(function (b, j) { b.classList.toggle('is-active', j === i); b.setAttribute('aria-selected', String(j === i)); });
+        panels.forEach(function (p, j) { p.classList.toggle('is-active', j === i); });
+      }
+      roles.forEach(function (b, i) { b.addEventListener('click', function () { select(i, true); }); });
+      select(0, true);
+      document.getElementById('year').textContent = new Date().getFullYear();
+    })();
+  </script>
 </body>
 </html>

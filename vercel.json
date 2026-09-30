@@ -45,5 +45,17 @@
         }
       ]
     }
+  ],
+  "redirects": [
+    {
+      "source": "/newsletters",
+      "destination": "/writing",
+      "permanent": true
+    },
+    {
+      "source": "/newsletters.html",
+      "destination": "/writing",
+      "permanent": true
+    }
   ]
 }
