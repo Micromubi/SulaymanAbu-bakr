@@ -11,12 +11,65 @@
   <meta property="og:image" content="images/portrait.jpg">
   <meta name="theme-color" content="#ffffff">
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="images/favicon-48.png" type="image/png" sizes="48x48">
+  <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+
+  <link rel="preload" href="fonts/cormorant-garamond.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/cormorant-garamond-italic.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/manrope.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="images/portrait.webp" as="image" type="image/webp" fetchpriority="high">
   <link rel="stylesheet" href="css/styles.css">
+
+  <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Sulayman Abu-Bakr",
+    "honorificSuffix": "MPH",
+    "jobTitle": "Executive Secretary / CEO",
+    "worksFor": {
+      "@type": "GovernmentOrganization",
+      "name": "Niger State Contributory Health Agency (NiCare)",
+      "url": "https://nicare.nigerstate.gov.ng/"
+    },
+    "alumniOf": [
+      {
+        "@type": "CollegeOrUniversity",
+        "name": "Nile University of Nigeria"
+      },
+      {
+        "@type": "CollegeOrUniversity",
+        "name": "University of East London"
+      }
+    ],
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Minna",
+      "addressRegion": "Niger State",
+      "addressCountry": "NG"
+    },
+    "email": "mailto:sulayman.abu-bakr@nigerstate.gov.ng",
+    "image": "images/portrait.jpg",
+    "knowsAbout": [
+      "Health systems strengthening",
+      "Health insurance",
+      "Health financing",
+      "Digital health",
+      "Health informatics",
+      "DHIS2",
+      "Universal health coverage",
+      "Public health policy"
+    ],
+    "sameAs": [
+      "https://www.linkedin.com/in/sulayman-abu-bakr-mph-1808b078/",
+      "https://www.researchgate.net/profile/Sulayman_Abu-Bakr"
+    ]
+  }
+  </script>
 </head>
 <body>
+  <a href="#profile" class="skip-link">Skip to content</a>
 
   <!-- ============ NAVIGATION ============ -->
   <header class="nav" id="nav">
@@ -46,27 +99,30 @@
       <div class="hero__glow" aria-hidden="true"></div>
       <div class="container hero__grid">
         <div class="hero__text">
-          <p class="eyebrow reveal">Health Systems Strengthening &amp; Health Informatics</p>
-          <h1 class="hero__title reveal">
+          <p class="eyebrow rise">Health Systems Strengthening &amp; Health Informatics</p>
+          <h1 class="hero__title rise">
             Sulayman<br>
             <em>Abu-Bakr</em><span class="hero__post">MPH</span>
           </h1>
-          <p class="hero__lede reveal">
+          <p class="hero__lede rise">
             Over a decade driving national health policy, primary health care transformation,
             digital health and health insurance reform in Nigeria. Now leading the expansion of
             universal health coverage across Niger State.
           </p>
-          <div class="hero__actions reveal">
+          <div class="hero__actions rise">
             <a href="#impact" class="btn btn--dark">View His Impact</a>
             <a href="#contact" class="btn btn--ghost">Get in Touch</a>
           </div>
         </div>
 
-        <figure class="portrait reveal">
+        <figure class="portrait rise">
           <div class="portrait__frame">
-            <img src="images/portrait.jpg" alt="Portrait of Sulayman Abu-Bakr, MPH" class="portrait__img"
-                 width="500" height="538" fetchpriority="high" decoding="async"
-                 onerror="this.remove()">
+            <picture>
+              <source srcset="images/portrait.webp" type="image/webp">
+              <img src="images/portrait.jpg" alt="Portrait of Sulayman Abu-Bakr, MPH" class="portrait__img"
+                   width="500" height="538" fetchpriority="high"
+                   onerror="this.closest('picture').remove()">
+            </picture>
             <div class="portrait__fallback" aria-hidden="true">
               <span>SA</span>
             </div>
@@ -144,11 +200,32 @@
             <dl>
               <div><dt>Current Role</dt><dd>Executive Secretary / CEO, NiCare</dd></div>
               <div><dt>Experience</dt><dd>10+ years in health systems &amp; digital health</dd></div>
-              <div><dt>Education</dt><dd>MPH, Nile University<br>BSc Business Information Systems, University of East London</dd></div>
+              <div><dt>Education</dt><dd>MPH (Distinction), Nile University<br>BSc Business Information Systems, University of East London</dd></div>
               <div><dt>Fellowship</dt><dd>US CDC GEEKS Fellow, 2019–2020</dd></div>
               <div><dt>Based In</dt><dd>Minna, Niger State, Nigeria</dd></div>
             </dl>
           </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ IN HIS WORDS ============ -->
+    <section class="words" aria-label="In his words">
+      <div class="container">
+        <p class="eyebrow reveal">In His Words</p>
+        <div class="words__grid">
+          <blockquote class="quote quote--lead reveal">
+            <p>Universal Health Coverage, to me, has always been a <em>political decision</em> before it is a technical one.</p>
+            <footer>Sulayman Abu-Bakr, 2026</footer>
+          </blockquote>
+          <blockquote class="quote reveal">
+            <p>Technology adoption is only half the story. The real work is building the institutional readiness (data, people, systems, leadership) to use it responsibly.</p>
+            <footer>On leading public sector transformation, Kigali, 2026</footer>
+          </blockquote>
+          <blockquote class="quote reveal">
+            <p>Enrolment numbers don't move on policy alone. They move when trusted voices carry the message into every ward, every household, every family.</p>
+            <footer>On NiCare's health insurance ambassadors, 2026</footer>
+          </blockquote>
         </div>
       </div>
     </section>
@@ -437,15 +514,19 @@
           <div class="cred reveal">
             <h3 class="subhead">Education</h3>
             <p>
-              Sulayman holds a Master of Public Health from Nile University (2020–2023). His academic
-              foundation is in technology: a BSc in Business Information Systems from the University of
-              East London (2010–2013), followed by Coventry University's Master's Qualifying Programme in 2013.
+              Sulayman holds a Master of Public Health from Nile University of Nigeria, awarded with
+              Distinction in 2023, where he also served as course representative for his cohort. His
+              academic foundation is in technology: a BSc in Business Information Systems from the
+              University of East London (2010–2013), followed by Coventry University's Master's
+              Qualifying Programme in 2013.
             </p>
           </div>
           <div class="cred reveal">
             <h3 class="subhead">Continuing Development</h3>
             <p>
-              He continues to build on this foundation. In 2025 he completed <em>Futures for Public
+              He continues to build on this foundation. In 2026 he took part in the African Centre for
+              Tax and Governance executive programme <em>Leading Public Sector Transformation in the Age
+              of Artificial Intelligence</em> in Kigali, Rwanda. In 2025 he completed <em>Futures for Public
               Policy</em> at the Lee Kuan Yew School of Public Policy, National University of Singapore,
               and <em>Health Financing Policy for Universal Health Coverage</em> with the World Health
               Organization. He trained in artificial intelligence in health insurance in 2024 and
@@ -460,7 +541,9 @@
             <h3 class="subhead">Recognition</h3>
             <p>
               Under his leadership, NiCare has been recognised nationally as one of the top five performing
-              state social health insurance agencies. Earlier in his career, NPHCDA awarded him a
+              state social health insurance agencies. In September 2026 he received a Certificate of
+              Recognition from the Female Director Generals of Niger State at their Awards &amp;
+              Appreciation Dinner in Minna. Earlier in his career, NPHCDA awarded him a
               Certificate of Recognition in 2020, and he was selected as a US CDC GEEKS Fellow for
               2019–2020.
             </p>
@@ -541,34 +624,46 @@
         <!-- Photo credits: each image is credited to the publication it was sourced from -->
         <div class="gallery" id="gallery">
           <figure class="gallery__item gallery__item--tall reveal">
-            <button type="button" class="gallery__open" data-full="images/gallery/official-portrait.jpg"
+            <button type="button" class="gallery__open" data-full="images/gallery/official-portrait.webp"
                     data-caption="Official portrait of Sulayman Abu-Bakr, Executive Secretary / CEO of NiCare" data-credit="Photo via Nigerian Tribune">
-              <img src="images/gallery/official-portrait.jpg" alt="Official portrait of Sulayman Abu-Bakr in front of the Nigerian flag"
+              <picture>
+                <source type="image/webp" srcset="images/gallery/official-portrait-800.webp 800w, images/gallery/official-portrait.webp 1200w" sizes="(max-width: 560px) 100vw, (max-width: 900px) 50vw, 33vw">
+                <img src="images/gallery/official-portrait.jpg" alt="Official portrait of Sulayman Abu-Bakr in front of the Nigerian flag"
                    width="1200" height="885" loading="lazy" decoding="async" style="object-position: 50% 20%">
+              </picture>
             </button>
             <figcaption><span>Official Portrait</span><small>Photo via Nigerian Tribune</small></figcaption>
           </figure>
           <figure class="gallery__item gallery__item--wide reveal">
-            <button type="button" class="gallery__open" data-full="images/gallery/vulnerable-enrolment-drive-2026.jpg"
+            <button type="button" class="gallery__open" data-full="images/gallery/vulnerable-enrolment-drive-2026.webp"
                     data-caption="Launch of the drive to enrol 65,000 more vulnerable residents in health insurance, with the First Lady of Niger State, August 2026" data-credit="Photo via Africa-Press">
-              <img src="images/gallery/vulnerable-enrolment-drive-2026.jpg" alt="Launch of the NiCare enrolment drive for vulnerable residents with the First Lady of Niger State"
+              <picture>
+                <source type="image/webp" srcset="images/gallery/vulnerable-enrolment-drive-2026-800.webp 800w, images/gallery/vulnerable-enrolment-drive-2026.webp 1600w" sizes="(max-width: 560px) 100vw, (max-width: 900px) 50vw, 66vw">
+                <img src="images/gallery/vulnerable-enrolment-drive-2026.jpg" alt="Launch of the NiCare enrolment drive for vulnerable residents with the First Lady of Niger State"
                    width="1600" height="1200" loading="lazy" decoding="async">
+              </picture>
             </button>
             <figcaption><span>Enrolment Drive for Vulnerable Residents, 2026</span><small>Photo via Africa-Press</small></figcaption>
           </figure>
           <figure class="gallery__item reveal">
-            <button type="button" class="gallery__open" data-full="images/gallery/nicare-awards-2024.jpg"
+            <button type="button" class="gallery__open" data-full="images/gallery/nicare-awards-2024.webp"
                     data-caption="NiCare's inaugural Productivity Awards ceremony, December 2024" data-credit="Photo via Leadership">
-              <img src="images/gallery/nicare-awards-2024.jpg" alt="Award presentation at NiCare's inaugural Productivity Awards"
+              <picture>
+                <source type="image/webp" srcset="images/gallery/nicare-awards-2024-800.webp 800w, images/gallery/nicare-awards-2024.webp 1280w" sizes="(max-width: 560px) 100vw, (max-width: 900px) 50vw, 33vw">
+                <img src="images/gallery/nicare-awards-2024.jpg" alt="Award presentation at NiCare's inaugural Productivity Awards"
                    width="1280" height="854" loading="lazy" decoding="async">
+              </picture>
             </button>
             <figcaption><span>NiCare Productivity Awards, 2024</span><small>Photo via Leadership</small></figcaption>
           </figure>
           <figure class="gallery__item reveal">
-            <button type="button" class="gallery__open" data-full="images/gallery/etsu-nupe-advocacy-2024.jpg"
+            <button type="button" class="gallery__open" data-full="images/gallery/etsu-nupe-advocacy-2024.webp"
                     data-caption="Advocacy visit with UNICEF to the Etsu Nupe's palace in Bida on reaching zero-dose children, 2024" data-credit="Photo via Leadership">
-              <img src="images/gallery/etsu-nupe-advocacy-2024.jpg" alt="NiCare and UNICEF delegation at the Etsu Nupe's palace in Bida"
+              <picture>
+                <source type="image/webp" srcset="images/gallery/etsu-nupe-advocacy-2024.webp">
+                <img src="images/gallery/etsu-nupe-advocacy-2024.jpg" alt="NiCare and UNICEF delegation at the Etsu Nupe's palace in Bida"
                    width="603" height="326" loading="lazy" decoding="async">
+              </picture>
             </button>
             <figcaption><span>Zero-Dose Advocacy, Bida, 2024</span><small>Photo via Leadership</small></figcaption>
           </figure>
@@ -798,6 +893,6 @@
     <button type="button" class="lightbox__nav lightbox__nav--next" aria-label="Next photo">→</button>
   </div>
 
-  <script src="js/main.js"></script>
+  <script src="js/main.js" defer></script>
 </body>
 </html>
