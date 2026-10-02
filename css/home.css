@@ -168,3 +168,8 @@
 .q-muted { margin-top: 8px; font-family: var(--sans) !important; font-size: 0.85rem !important; color: var(--muted); }
 .q-footer { padding-block: 28px; border-top: 1px solid var(--line); font-size: 0.78rem; color: var(--muted); text-align: center; }
 @media (max-width: 560px) { .q-grid { grid-template-columns: 1fr; } }
+.q-footer__inner { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 12px 24px; max-width: 64rem; }
+.q-footer__social { display: flex; gap: 22px; }
+.q-footer__social a { font-size: 0.7rem; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted); transition: color 0.3s ease; }
+.q-footer__social a:hover { color: var(--gold-deep); }
+@media (max-width: 560px) { .q-footer__inner { justify-content: center; text-align: center; } }
