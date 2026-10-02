@@ -261,6 +261,19 @@
     });
   }
 
+  /* ---------- Media story: light the node of the moment in view ---------- */
+  var moments = document.querySelectorAll(".moment");
+  if (moments.length && "IntersectionObserver" in window) {
+    var momentObserver = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) entry.target.classList.add("is-active");
+      });
+    }, { rootMargin: "-40% 0px -50% 0px" });
+    moments.forEach(function (m) { momentObserver.observe(m); });
+  } else {
+    moments.forEach(function (m) { m.classList.add("is-active"); });
+  }
+
   /* ---------- Footer year ---------- */
   document.getElementById("year").textContent = new Date().getFullYear();
 })();

@@ -20,10 +20,10 @@
   <link rel="preload" href="fonts/cormorant-garamond.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="fonts/cormorant-garamond-italic.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="fonts/manrope.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="css/styles.css?v=9700fcff">
+  <link rel="stylesheet" href="css/styles.css?v=8cc37a2b">
 </head>
 <body class="page-media">
-  <a href="#photos" class="skip-link">Skip to content</a>
+  <a href="#story" class="skip-link">Skip to content</a>
 
   <!-- ============ NAVIGATION ============ -->
   <header class="nav" id="nav">
@@ -47,137 +47,323 @@
 
   <main id="top">
 
-    <section class="page-hero">
-      <div class="container">
-        <p class="eyebrow">Media</p>
-        <h1 class="page-hero__title">Photographs.</h1>
-        <p class="page-hero__lede">Moments from his work and public life. Select any photograph to view it larger.</p>
+    <section class="page-hero page-hero--split">
+      <div class="container page-hero__grid">
+        <div>
+          <p class="eyebrow">Media</p>
+          <h1 class="page-hero__title">A story<br><em>in pictures.</em></h1>
+          <p class="page-hero__lede">Moments from his work and public life, newest first. Select any photograph to view it larger.</p>
+        </div>
+        <figure class="page-hero__photo">
+          <picture>
+            <source type="image/webp" srcset="images/gallery/official-portrait-800.webp">
+            <img src="images/gallery/official-portrait.jpg" alt="Official portrait of Sulayman Abu-Bakr" width="1200" height="885" fetchpriority="high">
+          </picture>
+        </figure>
       </div>
     </section>
 
-    <section class="section" id="photos">
+    <section class="section" id="story">
       <div class="container">
-        <div class="wall" id="gallery">
-          <figure class="wall__item">
-            <button type="button" class="gallery__open wall__open" data-full="images/gallery/official-portrait.webp"
-                    data-caption="Official portrait" data-credit="Photo: Nigerian Tribune">
-              <picture>
-                <source type="image/webp" srcset="images/gallery/official-portrait-800.webp 800w, images/gallery/official-portrait.webp 1200w" sizes="(max-width: 560px) 100vw, (max-width: 900px) 50vw, 33vw">
-                <img src="images/gallery/official-portrait.jpg" alt="Official portrait" width="1200" height="885" loading="lazy" decoding="async">
-              </picture>
-            </button>
-            <figcaption>Official portrait<small>Nigerian Tribune</small></figcaption>
-          </figure>
-          <figure class="wall__item">
-            <button type="button" class="gallery__open wall__open" data-full="images/gallery/vulnerable-enrolment-drive-2026.webp"
-                    data-caption="Flag-off of the drive to enrol 65,000 vulnerable residents, with the First Lady of Niger State, 2026" data-credit="Photo: Africa-Press">
-              <picture>
-                <source type="image/webp" srcset="images/gallery/vulnerable-enrolment-drive-2026-800.webp 800w, images/gallery/vulnerable-enrolment-drive-2026.webp 1600w" sizes="(max-width: 560px) 100vw, (max-width: 900px) 50vw, 33vw">
-                <img src="images/gallery/vulnerable-enrolment-drive-2026.jpg" alt="Flag-off of the drive to enrol 65,000 vulnerable residents, with the First Lady of Niger State, 2026" width="1600" height="1200" loading="lazy" decoding="async">
-              </picture>
-            </button>
-            <figcaption>Flag-off of the drive to enrol 65,000 vulnerable residents, with the First Lady of Niger State, 2026<small>Africa-Press</small></figcaption>
-          </figure>
-          <figure class="wall__item">
-            <button type="button" class="gallery__open wall__open" data-full="images/gallery/retirees-launch-2024.webp"
-                    data-caption="Launching the Retiree Medical Insurance Package, October 2024" data-credit="Photo: NiCare Newsletter, Vol. 1">
-              <picture>
-                <source type="image/webp" srcset="images/gallery/retirees-launch-2024.webp">
-                <img src="images/gallery/retirees-launch-2024.jpg" alt="Launching the Retiree Medical Insurance Package, October 2024" width="458" height="488" loading="lazy" decoding="async">
-              </picture>
-            </button>
-            <figcaption>Launching the Retiree Medical Insurance Package, October 2024<small>NiCare Newsletter, Vol. 1</small></figcaption>
-          </figure>
-          <figure class="wall__item">
-            <button type="button" class="gallery__open wall__open" data-full="images/gallery/gavi-flag-off-2024.webp"
-                    data-caption="Speaking to the press at the Gavi/UNICEF health insurance flag-off, 2024" data-credit="Photo: NiCare Newsletter, Vol. 1">
-              <picture>
-                <source type="image/webp" srcset="images/gallery/gavi-flag-off-2024.webp">
-                <img src="images/gallery/gavi-flag-off-2024.jpg" alt="Speaking to the press at the Gavi/UNICEF health insurance flag-off, 2024" width="476" height="428" loading="lazy" decoding="async">
-              </picture>
-            </button>
-            <figcaption>Speaking to the press at the Gavi/UNICEF health insurance flag-off, 2024<small>NiCare Newsletter, Vol. 1</small></figcaption>
-          </figure>
-          <figure class="wall__item">
-            <button type="button" class="gallery__open wall__open" data-full="images/gallery/prestige-fm.webp"
-                    data-caption="On air at Prestige FM 91.7, Minna" data-credit="Photo: NiCare Newsletter, Vol. 1">
-              <picture>
-                <source type="image/webp" srcset="images/gallery/prestige-fm.webp">
-                <img src="images/gallery/prestige-fm.jpg" alt="On air at Prestige FM 91.7, Minna" width="500" height="248" loading="lazy" decoding="async">
-              </picture>
-            </button>
-            <figcaption>On air at Prestige FM 91.7, Minna<small>NiCare Newsletter, Vol. 1</small></figcaption>
-          </figure>
-          <figure class="wall__item">
-            <button type="button" class="gallery__open wall__open" data-full="images/gallery/awards-handshake-2024.webp"
-                    data-caption="At the first NiCare Productivity Awards, December 2024" data-credit="Photo: NiCare Newsletter, Vol. 1">
-              <picture>
-                <source type="image/webp" srcset="images/gallery/awards-handshake-2024.webp">
-                <img src="images/gallery/awards-handshake-2024.jpg" alt="At the first NiCare Productivity Awards, December 2024" width="472" height="456" loading="lazy" decoding="async">
-              </picture>
-            </button>
-            <figcaption>At the first NiCare Productivity Awards, December 2024<small>NiCare Newsletter, Vol. 1</small></figcaption>
-          </figure>
-          <figure class="wall__item">
-            <button type="button" class="gallery__open wall__open" data-full="images/gallery/nicare-awards-2024.webp"
-                    data-caption="Presenting an award at the NiCare Productivity Awards, December 2024" data-credit="Photo: Leadership">
-              <picture>
-                <source type="image/webp" srcset="images/gallery/nicare-awards-2024-800.webp 800w, images/gallery/nicare-awards-2024.webp 1280w" sizes="(max-width: 560px) 100vw, (max-width: 900px) 50vw, 33vw">
-                <img src="images/gallery/nicare-awards-2024.jpg" alt="Presenting an award at the NiCare Productivity Awards, December 2024" width="1280" height="854" loading="lazy" decoding="async">
-              </picture>
-            </button>
-            <figcaption>Presenting an award at the NiCare Productivity Awards, December 2024<small>Leadership</small></figcaption>
-          </figure>
-          <figure class="wall__item">
-            <button type="button" class="gallery__open wall__open" data-full="images/gallery/retreat-2024.webp"
-                    data-caption="Unveiling his strategic blueprint at the management retreat, 2024" data-credit="Photo: NiCare Newsletter, Vol. 1">
-              <picture>
-                <source type="image/webp" srcset="images/gallery/retreat-2024.webp">
-                <img src="images/gallery/retreat-2024.jpg" alt="Unveiling his strategic blueprint at the management retreat, 2024" width="474" height="668" loading="lazy" decoding="async">
-              </picture>
-            </button>
-            <figcaption>Unveiling his strategic blueprint at the management retreat, 2024<small>NiCare Newsletter, Vol. 1</small></figcaption>
-          </figure>
-          <figure class="wall__item">
-            <button type="button" class="gallery__open wall__open" data-full="images/gallery/quality-visit-2024.webp"
-                    data-caption="Quality assurance visit to a primary health care centre, Paikoro LGA, 2024" data-credit="Photo: NiCare Newsletter, Vol. 1">
-              <picture>
-                <source type="image/webp" srcset="images/gallery/quality-visit-2024.webp">
-                <img src="images/gallery/quality-visit-2024.jpg" alt="Quality assurance visit to a primary health care centre, Paikoro LGA, 2024" width="472" height="504" loading="lazy" decoding="async">
-              </picture>
-            </button>
-            <figcaption>Quality assurance visit to a primary health care centre, Paikoro LGA, 2024<small>NiCare Newsletter, Vol. 1</small></figcaption>
-          </figure>
-          <figure class="wall__item">
-            <button type="button" class="gallery__open wall__open" data-full="images/gallery/etsu-nupe-advocacy-2024.webp"
-                    data-caption="Advocacy visit with UNICEF to the Etsu Nupe, Bida, 2024" data-credit="Photo: Leadership">
-              <picture>
-                <source type="image/webp" srcset="images/gallery/etsu-nupe-advocacy-2024.webp">
-                <img src="images/gallery/etsu-nupe-advocacy-2024.jpg" alt="Advocacy visit with UNICEF to the Etsu Nupe, Bida, 2024" width="603" height="326" loading="lazy" decoding="async">
-              </picture>
-            </button>
-            <figcaption>Advocacy visit with UNICEF to the Etsu Nupe, Bida, 2024<small>Leadership</small></figcaption>
-          </figure>
-          <figure class="wall__item">
-            <button type="button" class="gallery__open wall__open" data-full="images/gallery/welcome-2024.webp"
-                    data-caption="Welcomed on assuming office, January 2024" data-credit="Photo: NiCare Newsletter, Vol. 1">
-              <picture>
-                <source type="image/webp" srcset="images/gallery/welcome-2024.webp">
-                <img src="images/gallery/welcome-2024.jpg" alt="Welcomed on assuming office, January 2024" width="464" height="436" loading="lazy" decoding="async">
-              </picture>
-            </button>
-            <figcaption>Welcomed on assuming office, January 2024<small>NiCare Newsletter, Vol. 1</small></figcaption>
-          </figure>
-          <figure class="wall__item">
-            <button type="button" class="gallery__open wall__open" data-full="images/gallery/assumption-of-duty-2024.webp"
-                    data-caption="With officials and staff on assuming office, 4 January 2024" data-credit="Photo: NiCare Newsletter, Vol. 1">
-              <picture>
-                <source type="image/webp" srcset="images/gallery/assumption-of-duty-2024.webp">
-                <img src="images/gallery/assumption-of-duty-2024.jpg" alt="With officials and staff on assuming office, 4 January 2024" width="984" height="376" loading="lazy" decoding="async">
-              </picture>
-            </button>
-            <figcaption>With officials and staff on assuming office, 4 January 2024<small>NiCare Newsletter, Vol. 1</small></figcaption>
-          </figure>
+        <div class="story" id="gallery">
+          <article class="moment">
+            <div class="moment__when">
+              <span class="moment__date">Sep 2026</span>
+              <span class="moment__place">Minna</span>
+            </div>
+            <span class="moment__node" aria-hidden="true"></span>
+            <div class="moment__body">
+              <h2 class="moment__title">Recognised for service</h2>
+              <p class="moment__text">Honoured with a Certificate of Recognition by the Female Director Generals of Niger State at their Awards &amp; Appreciation Dinner on 16 September.</p>
+              <div class="moment__photos">
+              <figure class="moment__photo moment__photo--tall">
+                <button type="button" class="gallery__open wall__open" data-full="images/gallery/recognition-female-dgs-2026.webp" data-caption="Receiving the Certificate of Recognition from the Female Director Generals of Niger State" data-credit="Photo: Sulayman Abu-Bakr on X">
+                  <picture>
+                    <source type="image/webp" srcset="images/gallery/recognition-female-dgs-2026-800.webp 800w, images/gallery/recognition-female-dgs-2026.webp 1200w" sizes="(max-width: 900px) 100vw, 60vw">
+                    <img src="images/gallery/recognition-female-dgs-2026.jpg" alt="Receiving the Certificate of Recognition from the Female Director Generals of Niger State" width="1200" height="1600" loading="lazy" decoding="async">
+                  </picture>
+                </button>
+                <figcaption>Receiving the Certificate of Recognition from the Female Director Generals of Niger State<small>Sulayman Abu-Bakr on X</small></figcaption>
+              </figure>
+              </div>
+            </div>
+          </article>
+          <article class="moment">
+            <div class="moment__when">
+              <span class="moment__date">Aug 2026</span>
+              <span class="moment__place">Abuja</span>
+            </div>
+            <span class="moment__node" aria-hidden="true"></span>
+            <div class="moment__body">
+              <h2 class="moment__title">Public health in a changing world</h2>
+              <p class="moment__text">Represented NiCare and Niger State at the joint conference of the Society for Public Health Professionals of Nigeria and the Professional Association of Public Health Nurses of Nigeria.</p>
+              <div class="moment__photos moment__photos--two">
+              <figure class="moment__photo">
+                <button type="button" class="gallery__open wall__open" data-full="images/gallery/sphpn-conference-speaking-2026.webp" data-caption="Speaking at the SPHPN &amp; PAPHNON Joint Conference" data-credit="Photo: Sulayman Abu-Bakr on X">
+                  <picture>
+                    <source type="image/webp" srcset="images/gallery/sphpn-conference-speaking-2026-800.webp 800w, images/gallery/sphpn-conference-speaking-2026.webp 1600w" sizes="(max-width: 900px) 100vw, 60vw">
+                    <img src="images/gallery/sphpn-conference-speaking-2026.jpg" alt="Speaking at the SPHPN &amp; PAPHNON Joint Conference" width="1600" height="1067" loading="lazy" decoding="async">
+                  </picture>
+                </button>
+                <figcaption>Speaking at the SPHPN &amp; PAPHNON Joint Conference<small>Sulayman Abu-Bakr on X</small></figcaption>
+              </figure>
+              <figure class="moment__photo">
+                <button type="button" class="gallery__open wall__open" data-full="images/gallery/sphpn-conference-2026.webp" data-caption="With delegates at the conference, Abuja" data-credit="Photo: Sulayman Abu-Bakr on X">
+                  <picture>
+                    <source type="image/webp" srcset="images/gallery/sphpn-conference-2026-800.webp 800w, images/gallery/sphpn-conference-2026.webp 1600w" sizes="(max-width: 900px) 100vw, 60vw">
+                    <img src="images/gallery/sphpn-conference-2026.jpg" alt="With delegates at the conference, Abuja" width="1600" height="1067" loading="lazy" decoding="async">
+                  </picture>
+                </button>
+                <figcaption>With delegates at the conference, Abuja<small>Sulayman Abu-Bakr on X</small></figcaption>
+              </figure>
+              </div>
+            </div>
+          </article>
+          <article class="moment">
+            <div class="moment__when">
+              <span class="moment__date">Aug 2026</span>
+              <span class="moment__place">Kigali, Rwanda</span>
+            </div>
+            <span class="moment__node" aria-hidden="true"></span>
+            <div class="moment__body">
+              <h2 class="moment__title">Leading in the age of AI</h2>
+              <p class="moment__text">A week of executive training with the African Centre for Tax and Governance on public sector transformation, and a close look at how Rwanda digitised its government services.</p>
+              <div class="moment__photos moment__photos--two">
+              <figure class="moment__photo">
+                <button type="button" class="gallery__open wall__open" data-full="images/gallery/kigali-session-2026.webp" data-caption="In session at the ACTG executive training, Kigali" data-credit="Photo: Sulayman Abu-Bakr on X">
+                  <picture>
+                    <source type="image/webp" srcset="images/gallery/kigali-session-2026-800.webp 800w, images/gallery/kigali-session-2026.webp 1600w" sizes="(max-width: 900px) 100vw, 60vw">
+                    <img src="images/gallery/kigali-session-2026.jpg" alt="In session at the ACTG executive training, Kigali" width="1600" height="1061" loading="lazy" decoding="async">
+                  </picture>
+                </button>
+                <figcaption>In session at the ACTG executive training, Kigali<small>Sulayman Abu-Bakr on X</small></figcaption>
+              </figure>
+              <figure class="moment__photo">
+                <button type="button" class="gallery__open wall__open" data-full="images/gallery/kigali-certificate-2026.webp" data-caption="Completing the programme" data-credit="Photo: Sulayman Abu-Bakr on X">
+                  <picture>
+                    <source type="image/webp" srcset="images/gallery/kigali-certificate-2026-800.webp 800w, images/gallery/kigali-certificate-2026.webp 1600w" sizes="(max-width: 900px) 100vw, 60vw">
+                    <img src="images/gallery/kigali-certificate-2026.jpg" alt="Completing the programme" width="1600" height="900" loading="lazy" decoding="async">
+                  </picture>
+                </button>
+                <figcaption>Completing the programme<small>Sulayman Abu-Bakr on X</small></figcaption>
+              </figure>
+              </div>
+            </div>
+          </article>
+          <article class="moment">
+            <div class="moment__when">
+              <span class="moment__date">Aug 2026</span>
+              <span class="moment__place">Minna</span>
+            </div>
+            <span class="moment__node" aria-hidden="true"></span>
+            <div class="moment__body">
+              <h2 class="moment__title">Ambassadors for the vulnerable</h2>
+              <p class="moment__text">The First Lady of Niger State and the Vice Chairpersons of all 25 LGAs were unveiled as Health Insurance Ambassadors, flagging off the drive to enrol 65,000 more vulnerable residents.</p>
+              <div class="moment__photos">
+              <figure class="moment__photo">
+                <button type="button" class="gallery__open wall__open" data-full="images/gallery/vulnerable-enrolment-drive-2026.webp" data-caption="Flag-off of the drive to enrol 65,000 vulnerable residents, with the First Lady of Niger State" data-credit="Photo: Africa-Press">
+                  <picture>
+                    <source type="image/webp" srcset="images/gallery/vulnerable-enrolment-drive-2026-800.webp 800w, images/gallery/vulnerable-enrolment-drive-2026.webp 1600w" sizes="(max-width: 900px) 100vw, 60vw">
+                    <img src="images/gallery/vulnerable-enrolment-drive-2026.jpg" alt="Flag-off of the drive to enrol 65,000 vulnerable residents, with the First Lady of Niger State" width="1600" height="1200" loading="lazy" decoding="async">
+                  </picture>
+                </button>
+                <figcaption>Flag-off of the drive to enrol 65,000 vulnerable residents, with the First Lady of Niger State<small>Africa-Press</small></figcaption>
+              </figure>
+              </div>
+            </div>
+          </article>
+          <article class="moment">
+            <div class="moment__when">
+              <span class="moment__date">Dec 2024</span>
+              <span class="moment__place">Minna</span>
+            </div>
+            <span class="moment__node" aria-hidden="true"></span>
+            <div class="moment__body">
+              <h2 class="moment__title">The first NiCare Productivity Awards</h2>
+              <p class="moment__text">A new tradition to recognise excellent staff, pioneer staff and retirees of the Agency.</p>
+              <div class="moment__photos moment__photos--two">
+              <figure class="moment__photo">
+                <button type="button" class="gallery__open wall__open" data-full="images/gallery/awards-handshake-2024.webp" data-caption="At the first NiCare Productivity Awards" data-credit="Photo: NiCare Newsletter, Vol. 1">
+                  <picture>
+                    <source type="image/webp" srcset="images/gallery/awards-handshake-2024.webp">
+                    <img src="images/gallery/awards-handshake-2024.jpg" alt="At the first NiCare Productivity Awards" width="472" height="456" loading="lazy" decoding="async">
+                  </picture>
+                </button>
+                <figcaption>At the first NiCare Productivity Awards<small>NiCare Newsletter, Vol. 1</small></figcaption>
+              </figure>
+              <figure class="moment__photo">
+                <button type="button" class="gallery__open wall__open" data-full="images/gallery/nicare-awards-2024.webp" data-caption="Presenting an award on the night" data-credit="Photo: Leadership">
+                  <picture>
+                    <source type="image/webp" srcset="images/gallery/nicare-awards-2024-800.webp 800w, images/gallery/nicare-awards-2024.webp 1280w" sizes="(max-width: 900px) 100vw, 60vw">
+                    <img src="images/gallery/nicare-awards-2024.jpg" alt="Presenting an award on the night" width="1280" height="854" loading="lazy" decoding="async">
+                  </picture>
+                </button>
+                <figcaption>Presenting an award on the night<small>Leadership</small></figcaption>
+              </figure>
+              </div>
+            </div>
+          </article>
+          <article class="moment">
+            <div class="moment__when">
+              <span class="moment__date">Oct 2024</span>
+              <span class="moment__place">Minna</span>
+            </div>
+            <span class="moment__node" aria-hidden="true"></span>
+            <div class="moment__body">
+              <h2 class="moment__title">Health insurance for retirees</h2>
+              <p class="moment__text">Launch of the Retiree Medical Insurance Package, fulfilling a promise made to the state's pensioners.</p>
+              <div class="moment__photos">
+              <figure class="moment__photo">
+                <button type="button" class="gallery__open wall__open" data-full="images/gallery/retirees-launch-2024.webp" data-caption="Launching the Retiree Medical Insurance Package" data-credit="Photo: NiCare Newsletter, Vol. 1">
+                  <picture>
+                    <source type="image/webp" srcset="images/gallery/retirees-launch-2024.webp">
+                    <img src="images/gallery/retirees-launch-2024.jpg" alt="Launching the Retiree Medical Insurance Package" width="458" height="488" loading="lazy" decoding="async">
+                  </picture>
+                </button>
+                <figcaption>Launching the Retiree Medical Insurance Package<small>NiCare Newsletter, Vol. 1</small></figcaption>
+              </figure>
+              </div>
+            </div>
+          </article>
+          <article class="moment">
+            <div class="moment__when">
+              <span class="moment__date">2024</span>
+              <span class="moment__place">Across Niger State</span>
+            </div>
+            <span class="moment__node" aria-hidden="true"></span>
+            <div class="moment__body">
+              <h2 class="moment__title">In the field and on air</h2>
+              <p class="moment__text">Quarterly quality assurance visits to health facilities, and radio appearances to explain health insurance to residents.</p>
+              <div class="moment__photos moment__photos--two">
+              <figure class="moment__photo">
+                <button type="button" class="gallery__open wall__open" data-full="images/gallery/quality-visit-2024.webp" data-caption="Quality assurance visit to a primary health care centre, Paikoro LGA" data-credit="Photo: NiCare Newsletter, Vol. 1">
+                  <picture>
+                    <source type="image/webp" srcset="images/gallery/quality-visit-2024.webp">
+                    <img src="images/gallery/quality-visit-2024.jpg" alt="Quality assurance visit to a primary health care centre, Paikoro LGA" width="472" height="504" loading="lazy" decoding="async">
+                  </picture>
+                </button>
+                <figcaption>Quality assurance visit to a primary health care centre, Paikoro LGA<small>NiCare Newsletter, Vol. 1</small></figcaption>
+              </figure>
+              <figure class="moment__photo">
+                <button type="button" class="gallery__open wall__open" data-full="images/gallery/prestige-fm.webp" data-caption="On air at Prestige FM 91.7, Minna" data-credit="Photo: NiCare Newsletter, Vol. 1">
+                  <picture>
+                    <source type="image/webp" srcset="images/gallery/prestige-fm.webp">
+                    <img src="images/gallery/prestige-fm.jpg" alt="On air at Prestige FM 91.7, Minna" width="500" height="248" loading="lazy" decoding="async">
+                  </picture>
+                </button>
+                <figcaption>On air at Prestige FM 91.7, Minna<small>NiCare Newsletter, Vol. 1</small></figcaption>
+              </figure>
+              </div>
+            </div>
+          </article>
+          <article class="moment">
+            <div class="moment__when">
+              <span class="moment__date">May 2024</span>
+              <span class="moment__place">Minna &amp; Bida</span>
+            </div>
+            <span class="moment__node" aria-hidden="true"></span>
+            <div class="moment__body">
+              <h2 class="moment__title">Reaching zero-dose children</h2>
+              <p class="moment__text">With Gavi and UNICEF, NiCare flagged off health insurance for women and children and took the campaign to traditional rulers.</p>
+              <div class="moment__photos moment__photos--two">
+              <figure class="moment__photo">
+                <button type="button" class="gallery__open wall__open" data-full="images/gallery/gavi-flag-off-2024.webp" data-caption="Speaking to the press at the Gavi/UNICEF flag-off" data-credit="Photo: NiCare Newsletter, Vol. 1">
+                  <picture>
+                    <source type="image/webp" srcset="images/gallery/gavi-flag-off-2024.webp">
+                    <img src="images/gallery/gavi-flag-off-2024.jpg" alt="Speaking to the press at the Gavi/UNICEF flag-off" width="476" height="428" loading="lazy" decoding="async">
+                  </picture>
+                </button>
+                <figcaption>Speaking to the press at the Gavi/UNICEF flag-off<small>NiCare Newsletter, Vol. 1</small></figcaption>
+              </figure>
+              <figure class="moment__photo">
+                <button type="button" class="gallery__open wall__open" data-full="images/gallery/etsu-nupe-advocacy-2024.webp" data-caption="Advocacy visit with UNICEF to the Etsu Nupe, Bida" data-credit="Photo: Leadership">
+                  <picture>
+                    <source type="image/webp" srcset="images/gallery/etsu-nupe-advocacy-2024.webp">
+                    <img src="images/gallery/etsu-nupe-advocacy-2024.jpg" alt="Advocacy visit with UNICEF to the Etsu Nupe, Bida" width="603" height="326" loading="lazy" decoding="async">
+                  </picture>
+                </button>
+                <figcaption>Advocacy visit with UNICEF to the Etsu Nupe, Bida<small>Leadership</small></figcaption>
+              </figure>
+              </div>
+            </div>
+          </article>
+          <article class="moment">
+            <div class="moment__when">
+              <span class="moment__date">Apr 2024</span>
+              <span class="moment__place">Minna</span>
+            </div>
+            <span class="moment__node" aria-hidden="true"></span>
+            <div class="moment__body">
+              <h2 class="moment__title">A strategic blueprint</h2>
+              <p class="moment__text">At a three-day management retreat he unveiled the 4-Point Agenda that would guide the Agency to 2027.</p>
+              <div class="moment__photos">
+              <figure class="moment__photo moment__photo--tall">
+                <button type="button" class="gallery__open wall__open" data-full="images/gallery/retreat-2024.webp" data-caption="Unveiling his strategic blueprint at the management retreat" data-credit="Photo: NiCare Newsletter, Vol. 1">
+                  <picture>
+                    <source type="image/webp" srcset="images/gallery/retreat-2024.webp">
+                    <img src="images/gallery/retreat-2024.jpg" alt="Unveiling his strategic blueprint at the management retreat" width="474" height="668" loading="lazy" decoding="async">
+                  </picture>
+                </button>
+                <figcaption>Unveiling his strategic blueprint at the management retreat<small>NiCare Newsletter, Vol. 1</small></figcaption>
+              </figure>
+              </div>
+            </div>
+          </article>
+          <article class="moment">
+            <div class="moment__when">
+              <span class="moment__date">Jan 2024</span>
+              <span class="moment__place">Minna</span>
+            </div>
+            <span class="moment__node" aria-hidden="true"></span>
+            <div class="moment__body">
+              <h2 class="moment__title">Assuming office</h2>
+              <p class="moment__text">On 4 January 2024 he assumed office as Executive Secretary and CEO of the Niger State Contributory Health Agency.</p>
+              <div class="moment__photos moment__photos--two">
+              <figure class="moment__photo">
+                <button type="button" class="gallery__open wall__open" data-full="images/gallery/welcome-2024.webp" data-caption="Welcomed on assuming office" data-credit="Photo: NiCare Newsletter, Vol. 1">
+                  <picture>
+                    <source type="image/webp" srcset="images/gallery/welcome-2024.webp">
+                    <img src="images/gallery/welcome-2024.jpg" alt="Welcomed on assuming office" width="464" height="436" loading="lazy" decoding="async">
+                  </picture>
+                </button>
+                <figcaption>Welcomed on assuming office<small>NiCare Newsletter, Vol. 1</small></figcaption>
+              </figure>
+              <figure class="moment__photo">
+                <button type="button" class="gallery__open wall__open" data-full="images/gallery/assumes-duty-2024.webp" data-caption="With NiCare staff on assuming duty, January 2024" data-credit="Photo: Leadership">
+                  <picture>
+                    <source type="image/webp" srcset="images/gallery/assumes-duty-2024-800.webp 800w, images/gallery/assumes-duty-2024.webp 1024w" sizes="(max-width: 900px) 100vw, 60vw">
+                    <img src="images/gallery/assumes-duty-2024.jpg" alt="With NiCare staff on assuming duty, January 2024" width="1024" height="683" loading="lazy" decoding="async">
+                  </picture>
+                </button>
+                <figcaption>With NiCare staff on assuming duty, January 2024<small>Leadership</small></figcaption>
+              </figure>
+              </div>
+            </div>
+          </article>
+          <article class="moment moment--small">
+            <div class="moment__when"><span class="moment__date">2023</span></div>
+            <span class="moment__node" aria-hidden="true"></span>
+            <div class="moment__body">
+              <h2 class="moment__title">Master of Public Health, with Distinction</h2>
+              <p class="moment__text">Nile University of Nigeria.</p>
+            </div>
+          </article>
+          <article class="moment moment--small">
+            <div class="moment__when"><span class="moment__date">2019</span></div>
+            <span class="moment__node" aria-hidden="true"></span>
+            <div class="moment__body">
+              <h2 class="moment__title">US CDC GEEKS Fellow</h2>
+              <p class="moment__text">Managed the national DHIS2 server and led system administration training.</p>
+            </div>
+          </article>
+          <article class="moment moment--small">
+            <div class="moment__when"><span class="moment__date">2014</span></div>
+            <span class="moment__node" aria-hidden="true"></span>
+            <div class="moment__body">
+              <h2 class="moment__title">Joins the National Primary Health Care Development Agency</h2>
+              <p class="moment__text">The start of a decade building Nigeria's primary health care data systems.</p>
+            </div>
+          </article>
         </div>
       </div>
     </section>
@@ -245,6 +431,14 @@
               <span class="press__arrow" aria-hidden="true">→</span>
             </a>
           </li>
+          <li class="press__item reveal">
+            <a href="https://leadership.ng/abu-bakr-assumes-duty-at-nicare/" target="_blank" rel="noopener">
+              <span class="press__date">Jan 2024</span>
+              <span class="press__outlet">Leadership</span>
+              <span class="press__title">Abu-bakr Assumes Duty At NiCARE</span>
+              <span class="press__arrow" aria-hidden="true">→</span>
+            </a>
+          </li>
         </ul>
       </div>
     </section>
@@ -291,6 +485,6 @@
     <button type="button" class="lightbox__nav lightbox__nav--next" aria-label="Next photo">→</button>
   </div>
 
-  <script src="js/main.js?v=edb835c2" defer></script>
+  <script src="js/main.js?v=4610b273" defer></script>
 </body>
 </html>
