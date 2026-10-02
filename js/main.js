@@ -274,6 +274,20 @@
     moments.forEach(function (m) { m.classList.add("is-active"); });
   }
 
+  /* ---------- Floating back-to-top ---------- */
+  var toTop = document.getElementById("toTop");
+  if (toTop) {
+    toTop.hidden = false;
+    var toggleTop = function () { toTop.classList.toggle("is-visible", window.scrollY > window.innerHeight * 0.8); };
+    window.addEventListener("scroll", toggleTop, { passive: true });
+    toggleTop();
+    toTop.addEventListener("click", function () {
+      window.scrollTo({ top: 0, behavior: reduceMotion ? "auto" : "smooth" });
+      var skip = document.querySelector(".nav__brand");
+      if (skip) skip.focus({ preventScroll: true });
+    });
+  }
+
   /* ---------- Footer year ---------- */
   document.getElementById("year").textContent = new Date().getFullYear();
 })();

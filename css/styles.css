@@ -1988,3 +1988,28 @@ textarea:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
   .moment__photos--two { grid-template-columns: 1fr; }
 }
 .moment__photos:not(.moment__photos--two) .moment__photo--tall { max-width: 440px; }
+
+/* ---------- Floating back-to-top ---------- */
+.to-top-float {
+  position: fixed;
+  right: max(20px, env(safe-area-inset-right));
+  bottom: max(20px, env(safe-area-inset-bottom));
+  z-index: 90;
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  padding: 0;
+  border: 1px solid rgba(184, 149, 90, 0.6);
+  border-radius: 50%;
+  background: var(--ink);
+  color: var(--gold-light);
+  cursor: pointer;
+  box-shadow: 0 12px 30px -12px rgba(14, 20, 28, 0.55);
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity 0.4s var(--ease), transform 0.4s var(--ease), background 0.3s ease;
+}
+.to-top-float.is-visible { opacity: 1; transform: none; }
+.to-top-float:hover { background: var(--gold-deep); color: var(--white); }
+.to-top-float svg { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
