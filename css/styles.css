@@ -1365,7 +1365,8 @@ textarea:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
 .tribute figcaption { display: grid; gap: 4px; letter-spacing: 0; text-transform: none; }
 .tribute__name { font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold-deep); }
 .tribute__role { font-weight: 400; font-size: 0.85rem; color: var(--muted); }
-.page-family .beyond { margin-top: 0; }
+.page-family .beyond,
+.page-about .beyond { margin-top: 0; }
 
 /* ---------- Heritage lineage ---------- */
 .lineage { border-top: 1px solid var(--ink); }
@@ -1881,12 +1882,19 @@ textarea:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
 .ledger-list div { font-size: 0.9rem; color: var(--muted); }
 
 .contact--simple { align-items: start; }
+.contact__topics { margin-top: 40px; }
+.contact__topics .social__label { margin-bottom: 12px; }
+.contact__topics ul { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--line); }
+.contact__topics li { padding-block: 10px; border-bottom: 1px solid var(--line); font-family: var(--serif); font-size: 1.15rem; color: var(--ink); }
+.bio__downloads { display: flex; flex-wrap: wrap; gap: 12px 28px; margin-top: 40px; font-size: 0.92rem !important; }
 
 .letter-card { max-width: 44rem; }
 .letter-card__date { font-size: 0.7rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold-deep); }
 .letter-card__title { margin-top: 8px; font-family: var(--serif); font-size: clamp(1.6rem, 2.8vw, 2.2rem); font-weight: 400; line-height: 1.2; }
 .letter-card__excerpt { margin-top: 18px; font-family: var(--serif); font-size: 1.3rem; font-style: italic; line-height: 1.5; color: var(--ink-soft); }
 .letter-card__full { margin-top: 24px; }
+.letter-card__summary { margin-top: 18px; color: var(--ink-soft); line-height: 1.75; }
+.letter-card .link-arrow { margin-top: 24px; }
 .letter-card__full summary {
   display: inline-block;
   cursor: pointer;

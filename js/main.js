@@ -3,7 +3,7 @@
   "use strict";
 
   // Set this to the office email to make the contact form open a pre-filled email.
-  var CONTACT_EMAIL = "sulaymanbakr@gmail.com";
+  var CONTACT_EMAIL = ""; // TODO: set to the new address on his own domain
 
   document.documentElement.classList.remove("no-js");
 

@@ -154,6 +154,17 @@
 .q-link { display: inline-flex; gap: 8px; margin-top: 24px; font-size: 0.88rem; font-weight: 500; color: var(--ink); border-bottom: 1px solid var(--line-strong); padding-bottom: 3px; }
 .q-link:hover { border-color: var(--gold); color: var(--gold-deep); }
 
+.q-quote { padding-bottom: clamp(64px, 9vw, 110px); }
+.q-testimonial { margin: 0; padding-left: 24px; border-left: 2px solid var(--gold); }
+.q-testimonial blockquote { margin: 0; }
+.q-testimonial blockquote p { font-family: var(--serif); font-size: clamp(1.2rem, 1.9vw, 1.45rem); line-height: 1.5; color: var(--ink-soft); }
+.q-testimonial figcaption { display: grid; gap: 4px; margin-top: 16px; }
+.q-testimonial__name { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold-deep); }
+.q-testimonial__role { font-size: 0.85rem; color: var(--muted); }
+.q-press { margin-top: 32px; font-size: 0.92rem; line-height: 1.6; color: var(--muted); }
+.q-press a { color: var(--ink); border-bottom: 1px solid var(--line-strong); white-space: nowrap; }
+.q-press a:hover { color: var(--gold-deep); border-color: var(--gold); }
+
 .q-index { padding-bottom: clamp(64px, 9vw, 110px); }
 .q-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0 48px; }
 .q-item { display: grid; gap: 6px; padding-block: 22px; border-top: 1px solid var(--line); }
